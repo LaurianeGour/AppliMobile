@@ -20,6 +20,8 @@
 
 >Temps de developpement actuel : entre 22 et 25 heures
 
+> Minimum SDK : API 22 Android 5.1 Lollipop : Couvre ~92.3% des appareils
+
 - Création des fragments et des activités
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
@@ -31,12 +33,12 @@
 
 
 ## Bibliographie :
-- https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
-- https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
-- https://fr.wikipedia.org/wiki/Type_de_médias
-- https://developer.android.com/docs
+
+- https://developer.android.com
 - https://stackoverflow.com
 - https://www.developpez.com
+- https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
+- https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
 - http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
 - https://github.com/JakeWharton/butterknife
 - https://github.com/frankiesardo/icepick
