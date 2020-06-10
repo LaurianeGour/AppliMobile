@@ -1,0 +1,2 @@
+rootProject.name='CalandarPlus'
+include ':app'

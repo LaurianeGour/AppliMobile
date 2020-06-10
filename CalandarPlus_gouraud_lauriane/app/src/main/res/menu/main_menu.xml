@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+    android:id="@+id/menu_agenda"
+    android:icon="@drawable/ic_agenda"
+    android:title="@string/agenda"
+    />
+
+    <item
+    android:id="@+id/menu_to_do_list"
+    android:icon="@drawable/ic_todolist"
+    android:title="@string/todolist" />
+
+    <item
+    android:id="@+id/menu_gerer_agenda"
+    android:icon="@drawable/ic_gere_agenda"
+    android:title="@string/gere_agenda" />
+
+    <item
+    android:id="@+id/menu_synchro"
+    android:icon="@drawable/ic_sychro"
+    android:title="@string/sychro" />
+
+    <item
+    android:id="@+id/menu_parametres"
+    android:icon="@drawable/ic_param"
+    android:title="@string/parametres" />
+</menu>

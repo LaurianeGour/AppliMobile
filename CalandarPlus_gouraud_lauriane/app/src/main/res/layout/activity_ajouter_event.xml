@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ensim.calandarplus.Controllers.Activities.AjouterEvent">
+
+    <!-- toolbar définie dans toolbar.xml-->
+    <include
+        layout="@layout/toolbar"/>
+
+    <!-- Contenu : rien pour l'instant -->
+    <TextView
+        android:id="@+id/zone_texte_add_event"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/add_event"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

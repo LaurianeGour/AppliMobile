@@ -1,0 +1,29 @@
+<resources>
+    <!-- Global -->
+    <string name="app_name">CalandarPlus</string>
+
+    <!--Pour le Menu -->
+    <string name="menu_button">Menu button</string>
+    <string name="Menu">Menu</string>
+    <string name="agenda">Emploi du temps</string>
+    <string name="todolist">To Do List</string>
+    <string name="gere_agenda">Gerer agendas</string>
+    <string name="sychro">Synchroniser</string>
+    <string name="paramètres">Parametres</string>
+    <string name="navigation_drawer_open">Ouvrir Navigation Drawer</string>
+    <string name="navigation_drawer_close">Fermer Navigation Drawer</string>
+    <string name="parametres">Paramètres</string>
+
+    <!-- Création / nom pages -->
+    <string name="jour">Jour</string>
+    <string name="semaine">Semaine</string>
+    <string name="icon_add">Icon add</string>
+    <string name="add_event">Ajouter un evenement</string>
+    <string name="ajouter_tache">Ajouter Tâche</string>
+    <string name="add_agenda">Ajouter un agenda</string>
+    <string name="add_tache">Ajouter une tâche</string>
+
+    <!-- Autre-->
+
+
+</resources>

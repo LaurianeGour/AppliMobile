@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ensim.calandarplus.Controllers.Fragments.AgendaSemaine">
+
+    <!-- Contenu : rien pour l'instant -->
+    <TextView
+        android:id="@+id/zone_texte_frag_semaine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/semaine"
+        android:gravity="center"
+        android:textAlignment="center"/>
+
+    <!-- footer -->
+    <RelativeLayout
+        android:id="@+id/footer_ag_sem"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_toolbar_50"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary">
+
+        <!-- Icone permettant, au clique, d'atteindre la page d'ajout d'evenement -->
+        <ImageView
+            android:id="@+id/Button_sem_add_event"
+            android:layout_width="@dimen/icon_40"
+            android:layout_height="@dimen/icon_40"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/icon_40"
+            android:contentDescription="@string/icon_add"
+            android:onClick="onClick"
+            android:src="@drawable/ic_add"
+            android:tint="@color/color_icon"
+            tools:ignore="OnClick" />
+
+        <!-- Bouton permettant d'atteindre le fragment Agenda Jour -->
+        <Button
+            android:id="@+id/button_s_v_j"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h_40"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/marg_40"
+            android:background="@drawable/button_radius"
+            android:onClick="OpenAgendaJour"
+            android:text="@string/jour"
+            android:textColor="@color/Text"
+            tools:ignore="OnClick"/>
+    </RelativeLayout>
+
+</FrameLayout>
