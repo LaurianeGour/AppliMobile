@@ -1,7 +1,11 @@
 # Projet Application Mobile - Android Studio - CalandarPlus
 
 >J’ai eu pour idée de concevoir une application me permettant de gérer mon temps. En effet, jusqu’alors, j’ai : une application pour visualiser mon emploi du temps de l’université, des to do list pour ne pas oublier de choses à faire, et un tableau qui me permet de faire un emploi du temps complet. J’ai alors pensé à une application me permettant de regrouper tout cela.
+
+
 >J’ai pensé à utiliser une API de calendrier (Google ?) pour récupérer mon agenda de l’université. Une seconde page permettrait de noter les taches à faire, mais aussi,  optionnellement, d’y associé un temps, un état d’avancement, une ou plusieurs catégorises mais aussi d’indiquer une date limite. Lors de la création d’un nouvel événement dans l’emploi du temps, l’utilisateur pourra sélectionner une tache indiqué dans la to do list qui pré remplira l’évènement.
+
+
 >Ayant un téléphone Android et ne comptant pas changer de Smartphone, je pense développer mon application à l’aide d’Android Studio.
 
 ## Fonctionnalités prévues :
@@ -24,3 +28,17 @@
 #### Outils utilisés :
 - Utilisation des librairies Butterrknife et Icepick
 - Utilisation des log
+
+
+## Bibliographie :
+- https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
+- https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
+- https://fr.wikipedia.org/wiki/Type_de_médias
+- https://developer.android.com/docs
+- https://stackoverflow.com
+- https://www.developpez.com
+- http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
+- https://github.com/JakeWharton/butterknife
+- https://github.com/frankiesardo/icepick
+- https://abhiandroid.com/ui/calendarview
+- https://github.com/ical4j
