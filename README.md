@@ -5,11 +5,11 @@
 >Ayant un téléphone Android et ne comptant pas changer de Smartphone, je pense développer mon application à l’aide d’Android Studio.
 
 ## Fonctionnalités prévues :
-̵ 	Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API
-̵ 	Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
-̵ 	Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement.
-̵ 	Pouvoir noter et catégoriser les taches à faire.
-̵ 	Pouvoir indiquer l’état d’avancement d’une tache.
+- Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API
+- Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
+- Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement.
+- Pouvoir noter et catégoriser les taches à faire.
+- Pouvoir indiquer l’état d’avancement d’une tache.
 
 ## Suivit de projet :
 #### Developpement
