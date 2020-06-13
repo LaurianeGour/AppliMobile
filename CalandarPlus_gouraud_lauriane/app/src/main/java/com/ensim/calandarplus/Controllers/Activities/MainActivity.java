@@ -1,5 +1,9 @@
 package com.ensim.calandarplus.Controllers.Activities;
 
+/**
+ * Author : Lauriane GOURAUD
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;

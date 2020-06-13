@@ -1,3 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Author : Lauriane GOURAUD -->
+
 <resources>
     <!-- Reply Preference -->
     <string-array name="reply_entries">

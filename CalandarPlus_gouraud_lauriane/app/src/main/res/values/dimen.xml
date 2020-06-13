@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Author : Lauriane GOURAUD -->
+
 <resources>
     <!--Dimensions relatives aux icones -->
     <dimen name="icon_20">20dp</dimen>
@@ -11,6 +14,7 @@
     <dimen name="marg_50">50dp</dimen>
 
     <!-- Hauteurs des autres elements -->
+    <dimen name="h_70">70dp</dimen>
     <dimen name="h_40">40dp</dimen>
     <dimen name="h_10">10dp</dimen>
     <dimen name="h_5">5dp</dimen>

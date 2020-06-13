@@ -31,16 +31,25 @@
 - Utilisation des librairies Butterrknife et Icepick
 - Utilisation des log
 
+## Difficultés rencontrées :
+- Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
+- Je pensais utiliser la CalandarView proposée par Android Studio pour pouvoir afficher un calandrier hebdomadaire ou journalier.
+- Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
 
 ## Bibliographie :
 
 - https://developer.android.com
 - https://stackoverflow.com
 - https://www.developpez.com
+
 - https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
 - https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
+
 - http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
+
 - https://github.com/JakeWharton/butterknife
 - https://github.com/frankiesardo/icepick
 - https://abhiandroid.com/ui/calendarview
 - https://github.com/ical4j
+
+- https://www.youtube.com/watch?v=8L5sJQ44ntY *vidéo tutoriel todolist*

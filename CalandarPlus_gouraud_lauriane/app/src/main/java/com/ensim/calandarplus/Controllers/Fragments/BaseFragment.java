@@ -11,6 +11,10 @@ import butterknife.ButterKnife;
 import icepick.Icepick;
 import icepick.State;
 
+/**
+ * Author : Lauriane GOURAUD
+ */
+
 public abstract class BaseFragment extends Fragment {
 
     @State int buttonTag;

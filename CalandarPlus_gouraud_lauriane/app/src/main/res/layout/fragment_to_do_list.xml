@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Author : Lauriane GOURAUD -->
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,5 +16,20 @@
         android:text="@string/todolist"
         android:gravity="center"
         android:textAlignment="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/h_70"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:layout_height="@dimen/h_70"
+        android:layout_width="wrap_content">
+
+    </Button>
 
 </FrameLayout>
