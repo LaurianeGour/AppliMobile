@@ -18,7 +18,7 @@
 ## Suivit de projet :
 #### Developpement
 
->Temps de developpement actuel : entre 22 et 25 heures
+>Temps de developpement actuel : entre 22 et 25 heures + |_
 
 > Minimum SDK : API 22 Android 5.1 Lollipop : Couvre ~92.3% des appareils
 
@@ -32,9 +32,13 @@
 - Utilisation des log
 
 ## Difficultés rencontrées :
-- Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
-- Je pensais utiliser la CalandarView proposée par Android Studio pour pouvoir afficher un calandrier hebdomadaire ou journalier.
-- Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
+> Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
+
+
+> Je pensais utiliser la CalandarView proposée par Android Studio pour pouvoir afficher un calandrier hebdomadaire ou journalier.
+
+
+> Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
 
 ## Bibliographie :
 
@@ -53,3 +57,12 @@
 - https://github.com/ical4j
 
 - https://www.youtube.com/watch?v=8L5sJQ44ntY *vidéo tutoriel todolist*
+
+
+#### En cours :
+  - Reregarder la vidéo tutoriel todolist
+  - Completer la classe Adapter_categorie
+  - Completer la classe categorie
+  - Créer la classe tash
+  - Créer le layout cards_task
+  - Completer les .java AjouterTache et Todolist
