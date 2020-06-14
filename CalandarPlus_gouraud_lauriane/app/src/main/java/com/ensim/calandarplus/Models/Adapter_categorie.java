@@ -1,5 +1,9 @@
 package com.ensim.calandarplus.Models;
 
+/**
+ * Author : Lauriane GOURAUD
+ */
+
 import android.app.FragmentManager;
 import android.content.Context;
 import android.util.Log;
@@ -22,16 +26,16 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//Permet l'affichage les elements (ici des catégories) un à un dans une recycler view
 public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.ViewHolder>{
 
     private static final String TAG = "AdapterCategorie";
 
     private List<Categorie> list_categorie;
-
     private ToDoList todolist_frag;
-
     public Context context;
 
+    //1 element
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView text_categorie_name;
@@ -46,17 +50,21 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
             text_categorie_name = (TextView) itemView.findViewById(R.id.nom_categorie);
             delete_categorie = (Button) itemView.findViewById(R.id.delete_categorie);
-
+            //Gestion du listener du bouton de suppression d'une catégorie
+                // (présent dans le layout cards_categorie)
             delete_categorie.setOnClickListener(new View.OnClickListener() {
-
                 @Override
                 public void onClick(View v) {
+                    //Utilisation de l'instance du fragment récupéré dans le constructeur de Adapter_categorie
+                        // pour appeler la méthode DeleteCategorie du fragment ToDoList
+                        // sur un bouton du layout cards_categorie
                     Adapter_categorie.this.todolist_frag.DeleteCategorie(v);
                 }
             });
         }
     }
 
+    //Constructeur qui prend en paramètre l'instance du fragment todolist
     public Adapter_categorie(List<Categorie> list_categorie, ToDoList frag) {
         Log.d(TAG, "ConstructeurAdapteur");
         this.list_categorie = list_categorie;
@@ -64,6 +72,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
     }
 
 
+    //Créer une nouvelle instance de la classe ViewHolder et la lie au bon layout
     @NonNull
     @Override
     public Adapter_categorie.ViewHolder onCreateViewHolder(ViewGroup parent,
@@ -71,10 +80,12 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         Log.d(TAG, "onCreateViewHolder");
 
         context = parent.getContext();
+        //Lie chaque instance de ViewHolder à un layout cards_categorie
         View view = LayoutInflater.from(context).inflate(R.layout.cards_categorie, parent, false);
         return new Adapter_categorie.ViewHolder(view);
     }
 
+    //Gère le contenu des ViewHolder
     @Override
     public void onBindViewHolder(@NonNull Adapter_categorie.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder");
@@ -84,7 +95,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         holder.text_categorie_name.setText(categorie.getName());
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+    // Retourne le nombre d'élements (ici catégorie) existantes
     @Override
     public int getItemCount() {
         Log.d(TAG, "getItemCount");

@@ -1,5 +1,9 @@
 package com.ensim.calandarplus.Models;
 
+/**
+ * Author : Lauriane GOURAUD
+ */
+
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -15,7 +19,7 @@ public class CategorieHelper extends SQLiteOpenHelper{
         String createTableCategorie =
                 "CREATE TABLE  "+ Categorie.TABLE+
                         " ( " + Categorie._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                        Categorie.COL_TASK_NAME + " TEXT NOT NULL); ";
+                        Categorie.COL_CAT_NAME + " TEXT NOT NULL); ";
         db.execSQL(createTableCategorie);
     }
 

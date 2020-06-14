@@ -22,7 +22,7 @@
 
             <include
                 android:id="@+id/include_categorie_RV"
-                layout="@layout/categorie_recyclerview" />
+                layout="@layout/recyclerview_categorie" />
 
             <Button
                 android:id="@+id/button_add_categorie"
