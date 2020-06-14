@@ -20,7 +20,8 @@
 
 #### Temps de developpement actuel : entre 28 et 32 heures :
 
-    Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
+Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
+
 
 
 | Date      |     Temps    |   Total à partir du 7/05 |
