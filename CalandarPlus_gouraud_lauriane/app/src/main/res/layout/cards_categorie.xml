@@ -10,7 +10,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,21 +18,32 @@
         <TextView
             android:id="@+id/nom_categorie"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/h_40"/>
+            android:layout_height="@dimen/h_40"
+            android:baselineAlignBottom="true" />
+
+        <Button
+            android:id="@+id/delete_categorie"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_70"
+            android:onClick="DeleteCategorie"
+            android:text="@string/delete" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_task"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="@dimen/h_70"
             android:layout_gravity="top"
             android:orientation="vertical">
+
         </androidx.recyclerview.widget.RecyclerView>
 
         <Button
+            android:layout_width="match_parent"
             android:layout_height="@dimen/h_70"
-            android:layout_width="wrap_content"
-            android:text="@string/ajouter_tache"/>
+            android:text="@string/ajouter_tache"
+            />
 
-    </FrameLayout>
+    </LinearLayout>
 
 </androidx.cardview.widget.CardView>

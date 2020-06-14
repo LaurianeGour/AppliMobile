@@ -14,12 +14,14 @@
         layout="@layout/toolbar"/>
 
     <!-- Contenu : rien pour l'instant -->
-    <TextView
-        android:id="@+id/zone_texte_ajouter_tache"
+    <EditText
+        android:id="@+id/editText_ajouter_tache"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/add_tache"
         android:gravity="center"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:autofillHints="@string/add_tache"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

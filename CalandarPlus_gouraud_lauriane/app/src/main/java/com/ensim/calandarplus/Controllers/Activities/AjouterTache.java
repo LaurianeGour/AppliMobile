@@ -13,10 +13,14 @@ import android.util.Log;
 import com.example.calandarplus.R;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import butterknife.BindView;
+
 import butterknife.ButterKnife;
+import com.ensim.calandarplus.Models.CategorieHelper;
+import com.ensim.calandarplus.Models.Categorie;
 
 public class AjouterTache extends AppCompatActivity {
 
@@ -25,6 +29,7 @@ public class AjouterTache extends AppCompatActivity {
     //Definition des éléments de la vu (activity_main.xml)
     @BindView(R.id.toolbar) Toolbar toolbar;
     @BindView(R.id.Button_add) ImageView imageadd;
+    @BindView(R.id.editText_ajouter_tache) EditText edit_text_tache;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

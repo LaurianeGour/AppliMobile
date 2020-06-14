@@ -35,31 +35,27 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         }
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
+
     public Adapter_categorie(List<Categorie> list_categorie) {
         this.list_categorie = list_categorie;
     }
 
-    // Create new views (invoked by the layout manager)
+
     @Override
     public Adapter_categorie.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                       int viewType) {
         Log.d(TAG, "onCreateViewHolder");
-        // create a new view
+
         context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.cards_categorie, parent, false);
         Adapter_categorie.ViewHolder vh = new Adapter_categorie.ViewHolder(view);
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(Adapter_categorie.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder");
         final Categorie categorie = list_categorie.get(position);
-
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         holder.text_categorie_name.setText(categorie.getName());
     }
 

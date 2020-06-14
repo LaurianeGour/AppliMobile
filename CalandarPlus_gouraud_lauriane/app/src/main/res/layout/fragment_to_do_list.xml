@@ -17,18 +17,14 @@
         android:gravity="center"
         android:textAlignment="center"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_categorie"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/h_70"
-        android:layout_gravity="top"
-        android:orientation="horizontal">
-    </androidx.recyclerview.widget.RecyclerView>
+    <include layout="@layout/categorie_recyclerview" />
 
     <Button
-        android:layout_height="@dimen/h_70"
+        android:id="@+id/button_add_categorie"
         android:layout_width="wrap_content"
-        android:text="@string/add_categorie">
+        android:layout_height="@dimen/h_70"
+        android:text="@string/add_categorie"
+        android:onClick="Add_new_categorie">
 
     </Button>
 
