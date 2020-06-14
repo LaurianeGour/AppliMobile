@@ -26,7 +26,7 @@
         <Button
             android:id="@+id/delete_categorie"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/h_70"
+            android:layout_height="@dimen/h_40"
             android:onClick="DeleteCategorie"
             android:text="@string/delete" />
 
@@ -34,7 +34,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_task"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/h_70"
+            android:layout_height="wrap_content"
             android:layout_gravity="top"
             android:orientation="vertical">
 
@@ -42,7 +42,7 @@
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="@dimen/h_70"
+            android:layout_height="@dimen/h_40"
             android:text="@string/ajouter_tache"
             />
 

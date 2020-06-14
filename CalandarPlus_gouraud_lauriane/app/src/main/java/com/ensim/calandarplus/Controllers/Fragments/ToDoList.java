@@ -94,13 +94,13 @@ public class ToDoList extends BaseFragment {
                 );
 
         while(cursor.moveToNext()){
-            Log.d(TAG, "Cusor while");
+            Log.d(TAG, "Cursor while");
             int index = cursor.getColumnIndex(Categorie.COL_TASK_NAME);
             Categorie newC_cat = new Categorie(cursor.getString(index));
             categorie_list.add(newC_cat);
         }
 
-        m_adapter = new Adapter_categorie(categorie_list);
+        m_adapter = new Adapter_categorie(categorie_list, ToDoList.this);
         recyclerView_categorie.setAdapter(m_adapter);
         m_adapter.notifyDataSetChanged();
         Log.d(TAG, "m_adapteur taille : "+m_adapter.getItemCount());

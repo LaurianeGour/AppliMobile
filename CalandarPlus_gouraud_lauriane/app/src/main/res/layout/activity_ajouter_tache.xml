@@ -11,17 +11,19 @@
 
     <!-- toolbar définie dans toolbar.xml-->
     <include
-        layout="@layout/toolbar"/>
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Contenu : rien pour l'instant -->
     <EditText
         android:id="@+id/editText_ajouter_tache"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_toolbar_50"
         android:autofillHints="@string/add_tache"
+        android:gravity="center"
         android:inputType="text"
-        tools:ignore="LabelFor" />
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
