@@ -18,14 +18,23 @@
 ## Suivit de projet :
 #### Developpement
 
->Temps de developpement actuel : entre 22 et 25 heures + |_
+>Temps de developpement actuel : entre 25 et 30 heures
+  Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
+  - 7/05 : 3h
+  - 9/05 : 4h30
+  - 10/05 : 5h30
+  - 11/05 : 4h
+  - 13/05 : 3h30
+  - 12/06 : 1h
+  - 13/06 : 1h30
+  - 14/06 : 4h30
 
 > Minimum SDK : API 22 Android 5.1 Lollipop : Couvre ~92.3% des appareils
 
 - Création des fragments et des activités
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
-- Création de catégorie dans la toDoList
+- Création et suppression de catégorie dans la toDoList
 
 
 #### Outils utilisés :
@@ -58,10 +67,10 @@
 - https://github.com/ical4j
 
 - https://www.youtube.com/watch?v=8L5sJQ44ntY *vidéo tutoriel todolist*
+- https://www.youtube.com/watch?v=wzcFPFCYjFQ *vidéo tutoriel HorizontalScrollView*
 
 
 #### En cours :
-  - Pouvoir supprimer une catégorie
-  - Créer la classe tash
-  - Créer le layout cards_task
+  - Créer la classe tache
+  - Créer les layouts tache_recyclerView et cards_task
   - Completer les .java AjouterTache et Todolist

@@ -22,9 +22,7 @@
 
             <include
                 android:id="@+id/include_categorie_RV"
-                layout="@layout/categorie_recyclerview"
-                app:layout_constraintStart_toEndOf="@+id/button_add_categorie"
-                app:layout_constraintTop_toTopOf="parent" />
+                layout="@layout/categorie_recyclerview" />
 
             <Button
                 android:id="@+id/button_add_categorie"

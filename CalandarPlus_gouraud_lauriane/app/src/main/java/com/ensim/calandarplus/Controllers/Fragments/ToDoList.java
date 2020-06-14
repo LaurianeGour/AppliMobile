@@ -4,6 +4,7 @@ package com.ensim.calandarplus.Controllers.Fragments;
  * Author : Lauriane GOURAUD
  */
 
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -131,6 +132,12 @@ public class ToDoList extends BaseFragment {
                 .setNegativeButton(R.string.cancel, null)
                 .create();
         dialog.show();
+
+        Button buttonPositive = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        buttonPositive.setTextColor(ContextCompat.getColor(getContext(), R.color.Text));
+        Button buttonNegative = dialog.getButton(DialogInterface.BUTTON_NEGATIVE);
+        buttonNegative.setTextColor(ContextCompat.getColor(getContext(), R.color.Text));
+
         updateDesign();
     }
 

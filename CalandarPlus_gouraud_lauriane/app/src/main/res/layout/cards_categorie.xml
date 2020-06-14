@@ -30,15 +30,11 @@
             android:onClick="DeleteCategorie"
             android:text="@string/delete" />
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view_task"
+        <include
+            android:id="@+id/include_tache_RV"
+            layout="@layout/tache_recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:orientation="vertical">
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:layout_height="wrap_content"/>
 
         <Button
             android:layout_width="match_parent"
