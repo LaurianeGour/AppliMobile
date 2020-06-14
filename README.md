@@ -20,22 +20,14 @@
 
 #### Temps de developpement actuel : entre 25 et 30 heures :
 
-  Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
-
+    Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
     - 7/05 : 3h
-
     - 9/05 : 4h30
-
     - 10/05 : 5h30
-
     - 11/05 : 4h
-
     - 13/05 : 3h30
-
     - 12/06 : 1h
-
     - 13/06 : 1h30
-
     - 14/06 : 4h30
 
 #### Détails du projet :
