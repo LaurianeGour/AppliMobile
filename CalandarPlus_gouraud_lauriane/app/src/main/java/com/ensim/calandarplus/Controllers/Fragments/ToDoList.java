@@ -68,7 +68,7 @@ public class ToDoList extends BaseFragment {
     @Override
     protected void configureDesign() {
         Log.d(TAG, "configureDesign");
-        recyclerView_categorie.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView_categorie.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         m_helper = new CategorieHelper(getContext());
         bouton_add_categorie.setOnClickListener(new View.OnClickListener() {
@@ -86,6 +86,7 @@ public class ToDoList extends BaseFragment {
     protected void updateDesign() {
         Log.d(TAG, "updateDesign");
         List<Categorie> categorie_list = new ArrayList<>();
+        Log.d(TAG, "taille list : "+categorie_list.size());
         SQLiteDatabase db = m_helper.getReadableDatabase();
         Cursor cursor = db.query(Categorie.TABLE,
                 new String[] {Categorie._ID, Categorie.COL_TASK_NAME},
@@ -93,18 +94,16 @@ public class ToDoList extends BaseFragment {
                 );
 
         while(cursor.moveToNext()){
+            Log.d(TAG, "Cusor while");
             int index = cursor.getColumnIndex(Categorie.COL_TASK_NAME);
             Categorie newC_cat = new Categorie(cursor.getString(index));
             categorie_list.add(newC_cat);
         }
-        if(m_adapter == null){
-            m_adapter = new Adapter_categorie(categorie_list);
-            recyclerView_categorie.setAdapter(m_adapter);
-        }else{
-            m_adapter = new Adapter_categorie(categorie_list);
-            m_adapter.notifyDataSetChanged();
-        }
 
+        m_adapter = new Adapter_categorie(categorie_list);
+        recyclerView_categorie.setAdapter(m_adapter);
+        m_adapter.notifyDataSetChanged();
+        Log.d(TAG, "m_adapteur taille : "+m_adapter.getItemCount());
         cursor.close();
         db.close();
     }
@@ -119,7 +118,8 @@ public class ToDoList extends BaseFragment {
                 .setPositiveButton(R.string.add, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String new_categorie = String.valueOf(categorieEditText);
+                        String new_categorie = String.valueOf(categorieEditText.getText());
+                        Log.d(TAG, "Nouvelle catégorie : "+new_categorie);
                         SQLiteDatabase db = m_helper.getWritableDatabase();
                         ContentValues values = new ContentValues();
                         values.put(Categorie.COL_TASK_NAME, new_categorie);
@@ -131,6 +131,7 @@ public class ToDoList extends BaseFragment {
                 .setNegativeButton(R.string.cancel, null)
                 .create();
         dialog.show();
+        updateDesign();
     }
 
     public void DeleteCategorie(View view){

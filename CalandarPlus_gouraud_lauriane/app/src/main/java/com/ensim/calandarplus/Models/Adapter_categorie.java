@@ -15,6 +15,7 @@ import com.example.calandarplus.R;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.ViewHolder>{
 
@@ -26,21 +27,25 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.nom_categorie) TextView text_categorie_name;
+        private TextView text_categorie_name;
         private View itemView;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            Log.d(TAG, "ViewHolder");
             this.itemView = itemView;
+            text_categorie_name = (TextView) itemView.findViewById(R.id.nom_categorie);
         }
     }
 
 
     public Adapter_categorie(List<Categorie> list_categorie) {
+        Log.d(TAG, "ConstructeurAdapteur");
         this.list_categorie = list_categorie;
     }
 
 
+    @NonNull
     @Override
     public Adapter_categorie.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                       int viewType) {
@@ -48,20 +53,22 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
         context = parent.getContext();
         View view = LayoutInflater.from(context).inflate(R.layout.cards_categorie, parent, false);
-        Adapter_categorie.ViewHolder vh = new Adapter_categorie.ViewHolder(view);
-        return vh;
+        return new Adapter_categorie.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(Adapter_categorie.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Adapter_categorie.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder");
         final Categorie categorie = list_categorie.get(position);
+
+        Log.d(TAG, "_____name : "+ categorie.getName());
         holder.text_categorie_name.setText(categorie.getName());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
+        Log.d(TAG, "getItemCount");
         return list_categorie.size();
     }
 }

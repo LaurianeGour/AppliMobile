@@ -2,30 +2,18 @@
 
 <!-- Author : Lauriane GOURAUD -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ensim.calandarplus.Controllers.Fragments.ToDoList">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.ensim.calandarplus.Controllers.Fragments.ToDoList"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     <!-- Contenu : rien pour l'instant -->
-    <TextView
-        android:id="@+id/zone_texte_frag_todolist"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/todolist"
-        android:gravity="center"
-        android:textAlignment="center"/>
 
-    <include layout="@layout/categorie_recyclerview" />
+    <include
+        android:id="@+id/include_categorie_RV"
+        layout="@layout/categorie_recyclerview" />
 
-    <Button
-        android:id="@+id/button_add_categorie"
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/h_70"
-        android:text="@string/add_categorie"
-        android:onClick="Add_new_categorie">
-
-    </Button>
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,6 +25,7 @@
 - Création des fragments et des activités
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
+- Création de catégorie dans la toDoList
 
 
 #### Outils utilisés :
@@ -60,9 +61,7 @@
 
 
 #### En cours :
-  - Reregarder la vidéo tutoriel todolist
-  - Completer la classe Adapter_categorie
-  - Completer la classe categorie
+  - Pouvoir supprimer une catégorie
   - Créer la classe tash
   - Créer le layout cards_task
   - Completer les .java AjouterTache et Todolist
