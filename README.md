@@ -8,7 +8,7 @@
 
 >Ayant un téléphone Android et ne comptant pas changer de Smartphone, je pense développer mon application à l’aide d’Android Studio.
 
-## Fonctionnalités prévues :
+## Fonctionnalités prévues initialement :
 - Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API
 - Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
 - Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement.
@@ -21,13 +21,21 @@
 #### Temps de developpement actuel : entre 25 et 30 heures :
 
   Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
+
     - 7/05 : 3h
+
     - 9/05 : 4h30
+
     - 10/05 : 5h30
+
     - 11/05 : 4h
+
     - 13/05 : 3h30
+
     - 12/06 : 1h
+
     - 13/06 : 1h30
+
     - 14/06 : 4h30
 
 #### Détails du projet :
@@ -43,7 +51,7 @@
 - Utilisation des librairies Butterrknife et Icepick
 - Utilisation des log
 
-## Difficultés rencontrées :
+### Difficultés rencontrées :
 > Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
 
 
@@ -52,7 +60,7 @@
 
 > Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
 
-## Bibliographie :
+### Bibliographie :
 
 - https://developer.android.com
 - https://stackoverflow.com
