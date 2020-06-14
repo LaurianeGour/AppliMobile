@@ -16,19 +16,21 @@
 - Pouvoir indiquer l’état d’avancement d’une tache.
 
 ## Suivit de projet :
-#### Developpement
+### Developpement :
 
->Temps de developpement actuel : entre 25 et 30 heures
+#### Temps de developpement actuel : entre 25 et 30 heures :
+
   Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
-  - 7/05 : 3h
-  - 9/05 : 4h30
-  - 10/05 : 5h30
-  - 11/05 : 4h
-  - 13/05 : 3h30
-  - 12/06 : 1h
-  - 13/06 : 1h30
-  - 14/06 : 4h30
+    - 7/05 : 3h
+    - 9/05 : 4h30
+    - 10/05 : 5h30
+    - 11/05 : 4h
+    - 13/05 : 3h30
+    - 12/06 : 1h
+    - 13/06 : 1h30
+    - 14/06 : 4h30
 
+#### Détails du projet :
 > Minimum SDK : API 22 Android 5.1 Lollipop : Couvre ~92.3% des appareils
 
 - Création des fragments et des activités
