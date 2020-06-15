@@ -13,17 +13,19 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
         android:layout_margin="@dimen/h_5">
 
         <TextView
+            android:id="@+id/nom_tache"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentStart="true"
+            android:onClick="Detail_Tache"/>
 
         <ImageView
-            android:id="@+id/button_suppr_task"
+            android:id="@+id/delete_tache"
             android:layout_width="@dimen/icon_40"
             android:layout_height="@dimen/icon_40"
 
@@ -31,7 +33,7 @@
             android:layout_alignParentEnd="true"
 
             android:contentDescription="@string/delete"
-            android:onClick="Delete_task"
+            android:onClick="DeleteTache"
 
             android:src="@drawable/ic_suppr"
             android:tint="@color/color_icon"

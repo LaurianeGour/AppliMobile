@@ -33,7 +33,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 12/06|  1h  | 21h30  |
 | 13/06|  1h30  | 23h |
 | 14/06|  5h30  | 28h30 |
-
+| 15/06 | Début : 40 min + 15h -> | ? |
 
 
 
@@ -78,11 +78,3 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
 - https://www.youtube.com/watch?v=8L5sJQ44ntY *vidéo tutoriel todolist*
 - https://www.youtube.com/watch?v=wzcFPFCYjFQ *vidéo tutoriel HorizontalScrollView*
-
-
-#### A faire :
-  - Gerer la création de 2 catégorie de meme nom
-  - Pouvoir afficher plus de 3 catégories
-  - Créer la classe tache
-  - Créer les layouts tache_recyclerView et cards_task
-  - Completer les .java AjouterTache et Todolist

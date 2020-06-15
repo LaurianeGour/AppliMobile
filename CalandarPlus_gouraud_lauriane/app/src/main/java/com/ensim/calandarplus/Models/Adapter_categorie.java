@@ -41,6 +41,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         private TextView text_categorie_name;
         private Button delete_categorie;
         private View itemView;
+        private Button add_tache;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -49,16 +50,31 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
 
             text_categorie_name = (TextView) itemView.findViewById(R.id.nom_categorie);
+
             delete_categorie = (Button) itemView.findViewById(R.id.delete_categorie);
             //Gestion du listener du bouton de suppression d'une catégorie
                 // (présent dans le layout cards_categorie)
             delete_categorie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Log.d(TAG, "onclick delete_categorie");
                     //Utilisation de l'instance du fragment récupéré dans le constructeur de Adapter_categorie
                         // pour appeler la méthode DeleteCategorie du fragment ToDoList
                         // sur un bouton du layout cards_categorie
                     Adapter_categorie.this.todolist_frag.DeleteCategorie(v);
+                }
+            });
+
+            add_tache = (Button) itemView.findViewById(R.id.Add_tache_cat);
+
+            add_tache.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.d(TAG, "onclick add_tache");
+                    //Utilisation de l'instance du fragment récupéré dans le constructeur de Adapter_categorie
+                    // pour appeler la méthode DeleteCategorie du fragment ToDoList
+                    // sur un bouton du layout cards_categorie
+                    Adapter_categorie.this.todolist_frag.AddTache(v, (String) text_categorie_name.getText());
                 }
             });
         }
@@ -100,5 +116,9 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
     public int getItemCount() {
         Log.d(TAG, "getItemCount");
         return list_categorie.size();
+    }
+
+    public ToDoList GetTodolist_frag(){
+        return todolist_frag;
     }
 }

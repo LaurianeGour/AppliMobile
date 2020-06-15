@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.ensim.calandarplus.Controllers.Activities.AjouterTache;
+import com.ensim.calandarplus.Controllers.Activities.MainActivity;
 import com.ensim.calandarplus.Models.Adapter_categorie;
 import com.ensim.calandarplus.Models.Categorie;
 import com.ensim.calandarplus.Models.DataBase;
@@ -160,6 +163,20 @@ public class ToDoList extends BaseFragment {
         db.delete(Categorie.TABLE, Categorie.COL_CAT_NAME + " = ? ", new String[] {categorie});
         db.close();
         updateDesign();
+    }
+
+    public void DeleteTache(View v){
+        Log.d(TAG, "DeleteTache");
+    }
+
+    public void Detail_Tache(View v){
+        Log.d(TAG, "Detail_Tache");
+    }
+
+    public void AddTache(View v, String text_categorie_name){
+        Log.d(TAG, "AddTache");
+        Intent intent= new Intent(getContext(), AjouterTache.class);
+        startActivity(intent);
     }
 
 }
