@@ -17,6 +17,9 @@ import com.example.calandarplus.R;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 /**
  * Author : Lauriane GOURAUD
  */
@@ -25,15 +28,16 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
 
     private static final String TAG = "AdapterTache";
 
-    private List<Tache> list_taches;
+    private Adapter_categorie adapter_cat;
+    private List<TacheDB.Tache> list_taches;
     private ToDoList todolist_frag;
     public Context context;
 
     //1 element
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView text_tache_name;
-        private ImageView delete_tache;
+        @BindView(R.id.nom_tache) TextView text_tache_name;
+        @BindView(R.id.delete_tache)  ImageView delete_tache;
         private View itemView;
 
         public ViewHolder(View itemView) {
@@ -41,8 +45,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
             Log.d(TAG, "ViewHolder");
             this.itemView = itemView;
 
-
-            text_tache_name = (TextView) itemView.findViewById(R.id.nom_tache);
+            ButterKnife.bind(this,itemView);
 
             text_tache_name.setOnClickListener(new View.OnClickListener(){
                 @Override
@@ -54,8 +57,6 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
                     Adapter_tache.this.todolist_frag.Detail_Tache(v);
                 }
             });
-
-            delete_tache = (ImageView) itemView.findViewById(R.id.delete_tache);
 
             delete_tache.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -71,9 +72,10 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
     }
 
     //Constructeur qui prend en paramètre l'instance du fragment todolist
-    public Adapter_tache(List<Tache> list_taches, Adapter_categorie adapter) {
+    public Adapter_tache(List<TacheDB.Tache> list_taches, Adapter_categorie adapter) {
         Log.d(TAG, "ConstructeurAdapteur");
         this.list_taches = list_taches;
+        this.adapter_cat = adapter;
         this.todolist_frag = adapter.GetTodolist_frag();
     }
 
@@ -81,8 +83,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
     //Créer une nouvelle instance de la classe ViewHolder et la lie au bon layout
     @NonNull
     @Override
-    public Adapter_tache.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                           int viewType) {
+    public Adapter_tache.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder");
 
         context = parent.getContext();
@@ -95,8 +96,8 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
     @Override
     public void onBindViewHolder(@NonNull Adapter_tache.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder");
-        final Tache tache = list_taches.get(position);
-        Log.d(TAG, "_____name : "+ tache.getName());
+        final TacheDB.Tache tache = list_taches.get(position);
+        Log.d(TAG, "_________________________name tache : "+ tache.getName());
         if ( tache.GetId() == 0){
             holder.text_tache_name.setText(tache.getName());
         }

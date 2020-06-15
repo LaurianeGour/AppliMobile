@@ -33,5 +33,6 @@
     <string name="add">Ajouter</string>
     <string name="cancel">Annuler</string>
     <string name="delete">Supprimer</string>
+    <string name="categorie">Catégorie</string>
 
 </resources>

@@ -28,9 +28,11 @@ import android.widget.TextView;
 import com.ensim.calandarplus.Controllers.Activities.AjouterTache;
 import com.ensim.calandarplus.Controllers.Activities.MainActivity;
 import com.ensim.calandarplus.Models.Adapter_categorie;
-import com.ensim.calandarplus.Models.Categorie;
-import com.ensim.calandarplus.Models.DataBase;
+import com.ensim.calandarplus.Models.CategorieDB.Categorie;
+import com.ensim.calandarplus.Models.CategorieDB;
 import com.ensim.calandarplus.Models.CategorieHelper;
+import com.ensim.calandarplus.Models.TacheDB.Tache;
+import com.ensim.calandarplus.Models.TacheHelper;
 import com.example.calandarplus.R;
 
 import java.util.ArrayList;
@@ -51,10 +53,10 @@ public class ToDoList extends BaseFragment {
 
     @BindView(R.id.recycler_view_categorie) RecyclerView recyclerView_categorie;
     @BindView(R.id.button_add_categorie) Button bouton_add_categorie;
-    //@BindView(R.id.recycler_view_task) RecyclerView recyclerView_task;
 
-    private CategorieHelper m_helper;
+    private CategorieHelper cat_helper;
     private Adapter_categorie m_adapter;
+    private TacheHelper tache_helper;
 
 
     //Retourne une instance du fragment ToDoList
@@ -75,7 +77,9 @@ public class ToDoList extends BaseFragment {
         recyclerView_categorie.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         //CategorieHelper gère la table Categorie dans la base de donnée
-        m_helper = new CategorieHelper(getContext());
+        cat_helper = new CategorieHelper(getContext());
+
+        tache_helper = new TacheHelper(getContext());
 
         //Permet de gérer le clique du bouton
         bouton_add_categorie.setOnClickListener(new View.OnClickListener() {
@@ -93,19 +97,19 @@ public class ToDoList extends BaseFragment {
     @Override
     protected void updateDesign() {
         Log.d(TAG, "updateDesign");
-        List<Categorie> categorie_list = new ArrayList<>();
+        List<CategorieDB.Categorie> categorie_list = new ArrayList<>();
         Log.d(TAG, "taille list : "+categorie_list.size());
         //Lit le contenu de la table catégorie
-        SQLiteDatabase db = m_helper.getReadableDatabase();
-        Cursor cursor = db.query(Categorie.TABLE,
-                new String[] {Categorie._ID, Categorie.COL_CAT_NAME},
+        SQLiteDatabase db = cat_helper.getReadableDatabase();
+        Cursor cursor = db.query(CategorieDB.Categorie.TABLE,
+                new String[] {CategorieDB.Categorie._ID, CategorieDB.Categorie.COL_CAT_NAME},
                 null, null, null, null, null
                 );
 
         while(cursor.moveToNext()){
             Log.d(TAG, "Cursor while");
-            int index = cursor.getColumnIndex(Categorie.COL_CAT_NAME);
-            Categorie newC_cat = new Categorie(cursor.getString(index));
+            int index = cursor.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME);
+            CategorieDB.Categorie newC_cat = new Categorie(cursor.getString(index));
             categorie_list.add(newC_cat);
         }
         //Affiche les catégories trouvées dans la table dans la recyclerview
@@ -131,7 +135,7 @@ public class ToDoList extends BaseFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         String new_categorie = String.valueOf(categorieEditText.getText());
                         Log.d(TAG, "Nouvelle catégorie : "+new_categorie);
-                        SQLiteDatabase db = m_helper.getWritableDatabase();
+                        SQLiteDatabase db = cat_helper.getWritableDatabase();
                         ContentValues values = new ContentValues();
                         values.put(Categorie.COL_CAT_NAME, new_categorie);
                         db.insertWithOnConflict(Categorie.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
@@ -150,6 +154,7 @@ public class ToDoList extends BaseFragment {
 
         updateDesign();
     }
+
     //Methode appelé au click du bouton delete_categorie (Listener dans la classe  ViewHolder du .java Adapter_categorie)
     public void DeleteCategorie(View view){
         Log.d(TAG, "Delete_categorie");
@@ -158,7 +163,7 @@ public class ToDoList extends BaseFragment {
         TextView textView = (TextView) parent.findViewById(R.id.nom_categorie);
         String categorie = String.valueOf(textView.getText());
         //Ecrit dans la base de donnée
-        SQLiteDatabase db = m_helper.getWritableDatabase();
+        SQLiteDatabase db = cat_helper.getWritableDatabase();
         //Suppression de la catégorie
         db.delete(Categorie.TABLE, Categorie.COL_CAT_NAME + " = ? ", new String[] {categorie});
         db.close();
@@ -167,6 +172,16 @@ public class ToDoList extends BaseFragment {
 
     public void DeleteTache(View v){
         Log.d(TAG, "DeleteTache");
+        View parent = (View) v.getParent();
+        //Récupere le nom de la catégorie qu'il faut supprimer
+        TextView textView = (TextView) parent.findViewById(R.id.nom_tache);
+        String tache = String.valueOf(textView.getText());
+        //Ecrit dans la base de donnée
+        SQLiteDatabase db = tache_helper.getWritableDatabase();
+        //Suppression de la catégorie
+        db.delete(Tache.TABLE, Tache.COL_TACHE_NAME + " = ? ", new String[] {tache});
+        db.close();
+        updateDesign();
     }
 
     public void Detail_Tache(View v){

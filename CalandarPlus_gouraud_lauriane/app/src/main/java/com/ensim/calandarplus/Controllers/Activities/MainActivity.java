@@ -18,6 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.ensim.calandarplus.Controllers.Fragments.AgendaJour;
 import com.ensim.calandarplus.Controllers.Fragments.AgendaSemaine;
@@ -129,13 +130,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+
+
+
     //Lance le changement de fragment affiché par l'application
     private void startTransactionFragment(Fragment fragment){
         Log.d(TAG, "Changement Fragment");
         if(!fragment.isVisible()){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frag_agenda_sem,fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_init,fragment).commit();
         }
     }
+
+
+
+
 
     //Pour passer sur le fragment fragment_agenda_semaine
     private void showFragAgSem(){
@@ -192,15 +200,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Log.d(TAG, "New Fragment");
     }
 
+
+
+
+
     //Affichage du premier fragement : lors sdu lancement de l'application --> agenda de la semaine
     private void showFirstFragment(){
         Log.d(TAG, "Affichage 1er Fragment");
-        Fragment visibleFragment = getSupportFragmentManager().findFragmentById(R.id.frag_agenda_sem);
-        if (visibleFragment == null){
-            this.showFragAgSem();
+        Fragment frag = getSupportFragmentManager().findFragmentById(R.id.frag_init);;
+        if(frag == null){
+            this.showFragToDoList();;
             this.navigationView.getMenu().getItem(0).setChecked(true);
         }
     }
+
+
+
+
 
     //Au clique du bouton jour sur la page Agenda semaine
     public void OpenAgendaJour(View view) {
@@ -213,6 +229,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Log.d(TAG, "OpenAgendaSemaine");
         this.showFragAgSem();
     }
+
+
+
 
     //Gestion des elements cliquables dans les fragments AgendaJour, AgendaSemaine, GérerAgendas, Paramètres et ToDoList
     @Override

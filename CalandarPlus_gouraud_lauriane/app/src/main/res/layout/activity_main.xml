@@ -23,9 +23,10 @@
 
         <!-- Récupération du layout d'un fragment -->
         <FrameLayout
-            android:id="@+id/frag_agenda_sem"
+            android:id="@+id/frag_init"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
+
     </LinearLayout>
 
     <!-- Menu défilant via la gauche-->

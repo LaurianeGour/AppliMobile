@@ -10,20 +10,72 @@
     tools:context="com.ensim.calandarplus.Controllers.Activities.AjouterTache">
 
     <!-- toolbar définie dans toolbar.xml-->
-    <include
-        layout="@layout/toolbar"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Contenu : rien pour l'instant -->
+    <include
+        android:id="@+id/include_toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="180dp" />
+
+    <TextView
+        android:id="@+id/Text_tache"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_10"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/ajouter_tache"
+        app:layout_constraintTop_toBottomOf="@+id/include_toolbar" />
+
     <EditText
         android:id="@+id/editText_ajouter_tache"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/h_toolbar_50"
+        android:layout_marginTop="@dimen/h_10"
+
         android:autofillHints="@string/add_tache"
         android:gravity="center"
         android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_tache" />
+
+    <TextView
+        android:id="@+id/Text_categorie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_10"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/categorie"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ajouter_tache" />
+
+    <Spinner
+        android:id="@+id/spinner_lst_cat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_10"
+
+        app:layout_constraintTop_toBottomOf="@+id/Text_categorie"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/valider_add_tache"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_10"
+
+        android:gravity="center"
+
+        android:text="@string/add"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_lst_cat"
+
+        android:onClick="ValiderAjoutTache"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
