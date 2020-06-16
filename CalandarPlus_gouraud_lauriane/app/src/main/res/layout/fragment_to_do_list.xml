@@ -27,9 +27,9 @@
             <Button
                 android:id="@+id/button_add_categorie"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/h_40"
+                android:layout_height="@dimen/h_100"
                 android:onClick="Add_new_categorie"
-                android:text="@string/add_categorie"
+                android:text="@string/add_categorie_2lignes"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </LinearLayout>

@@ -171,11 +171,12 @@ public class ToDoList extends BaseFragment {
     }
 
     public void DeleteTache(View v){
-        Log.d(TAG, "DeleteTache");
+        Log.d(TAG, "DeleteTache ");
         View parent = (View) v.getParent();
         //Récupere le nom de la catégorie qu'il faut supprimer
         TextView textView = (TextView) parent.findViewById(R.id.nom_tache);
         String tache = String.valueOf(textView.getText());
+        Log.d(TAG, "nom tache : " + tache);
         //Ecrit dans la base de donnée
         SQLiteDatabase db = tache_helper.getWritableDatabase();
         //Suppression de la catégorie

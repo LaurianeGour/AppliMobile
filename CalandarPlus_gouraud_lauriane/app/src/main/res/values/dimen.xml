@@ -14,8 +14,10 @@
     <dimen name="marg_50">50dp</dimen>
 
     <!-- Hauteurs des autres elements -->
+    <dimen name="h_150">150dp</dimen>
     <dimen name="h_100">100dp</dimen>
     <dimen name="h_70">70dp</dimen>
+    <dimen name="h_60">60dp</dimen>
     <dimen name="h_40">40dp</dimen>
     <dimen name="h_10">10dp</dimen>
     <dimen name="h_5">5dp</dimen>

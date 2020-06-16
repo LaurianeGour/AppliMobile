@@ -98,9 +98,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
         Log.d(TAG, "onBindViewHolder");
         final TacheDB.Tache tache = list_taches.get(position);
         Log.d(TAG, "_________________________name tache : "+ tache.getName());
-        if ( tache.GetId() == 0){
-            holder.text_tache_name.setText(tache.getName());
-        }
+        holder.text_tache_name.setText(tache.getName());
     }
 
     // Retourne le nombre d'élements (ici tache) existantes
