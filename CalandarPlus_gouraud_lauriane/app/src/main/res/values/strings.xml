@@ -28,6 +28,7 @@
     <string name="add_tache">Ajouter une tâche</string>
 
     <!-- Pour la ToDoList -->
+    <string name="categorie">Catégorie</string>
     <string name="add_categorie">Ajouter une catégorie</string>
     <string name="add_new_categorie">Ajouter nouvelle catégorie à la ToDoList</string>
     <string name="add_categorie_2lignes">Ajouter une \ncatégorie</string>
@@ -36,6 +37,7 @@
     <string name="add">Ajouter</string>
     <string name="cancel">Annuler</string>
     <string name="delete">Supprimer</string>
-    <string name="categorie">Catégorie</string>
+    <string name="ok">Ok</string>
+
 
 </resources>

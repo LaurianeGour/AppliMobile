@@ -36,7 +36,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 13/06|  1h30  | 23h |
 | 14/06|  5h30  | 28h30 |
 | 15/06 | 6h20 | 34h50 |
-| 15/06 | 15h30 -> (-15 min)| ?  |
+| 15/06 | 2h | ?  |
 
 
 

@@ -135,12 +135,27 @@ public class ToDoList extends BaseFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         String new_categorie = String.valueOf(categorieEditText.getText());
                         Log.d(TAG, "Nouvelle catégorie : "+new_categorie);
-                        SQLiteDatabase db = cat_helper.getWritableDatabase();
-                        ContentValues values = new ContentValues();
-                        values.put(Categorie.COL_CAT_NAME, new_categorie);
-                        db.insertWithOnConflict(Categorie.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-                        db.close();
-                        updateDesign();
+                        if(VerifCategorieNotExist(new_categorie)){
+                            SQLiteDatabase db = cat_helper.getWritableDatabase();
+                            ContentValues values = new ContentValues();
+                            values.put(Categorie.COL_CAT_NAME, new_categorie);
+                            db.insertWithOnConflict(Categorie.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+                            db.close();
+                            updateDesign();
+                        }else{
+                            AlertDialog erreur_add_categorie = new AlertDialog.Builder(view.getContext())
+                                    .setMessage("La catégorie existe déja")
+                                    .setPositiveButton(R.string.ok,new DialogInterface.OnClickListener(){
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+                                            updateDesign();
+                                        }
+                                    } )
+                                    .create();
+                            erreur_add_categorie.show();
+                            Button buttonPositive = erreur_add_categorie.getButton(DialogInterface.BUTTON_POSITIVE);
+                            buttonPositive.setTextColor(ContextCompat.getColor(getContext(), R.color.Text));
+                        }
                     }
                 })
                 .setNegativeButton(R.string.cancel, null)
@@ -153,6 +168,26 @@ public class ToDoList extends BaseFragment {
         buttonNegative.setTextColor(ContextCompat.getColor(getContext(), R.color.Text));
 
         updateDesign();
+    }
+
+    public boolean VerifCategorieNotExist(String nom){
+        boolean is_not_exist = true;
+        SQLiteDatabase db = cat_helper.getReadableDatabase();
+        Cursor cursor = db.query(CategorieDB.Categorie.TABLE,
+                new String[] {CategorieDB.Categorie.COL_CAT_NAME},
+                null, null, null, null, null
+        );
+        while(cursor.moveToNext()){
+            Log.d(TAG, "Cursor while VerifCategorieNotExist");
+            //Ajoute à la liste de nom decatégorie le nom d'une catégorie
+            int index = cursor.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME);
+            String cat = cursor.getString(index);
+
+            if(cat.compareTo(nom)==0){
+                is_not_exist = false;
+            }
+        }
+        return is_not_exist;
     }
 
     //Methode appelé au click du bouton delete_categorie (Listener dans la classe  ViewHolder du .java Adapter_categorie)
