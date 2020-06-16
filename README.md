@@ -9,11 +9,13 @@
 >Ayant un téléphone Android et ne comptant pas changer de Smartphone, je pense développer mon application à l’aide d’Android Studio.
 
 ## Fonctionnalités prévues initialement :
-- Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API
+- Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API -> Abandonné le 16/06
 - Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
-- Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement.
+- Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement. -> Abandonné le 16/0+
 - Pouvoir noter et catégoriser les taches à faire.
 - Pouvoir indiquer l’état d’avancement d’une tache.
+
+Objectif au 16/06 : Faire une ToDoList la plus complete possible
 
 ## Suivit de projet :
 ### Developpement :
@@ -34,6 +36,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 13/06|  1h30  | 23h |
 | 14/06|  5h30  | 28h30 |
 | 15/06 | 6h20 | 34h50 |
+| 15/06 | 15h30 -> (-15 min)| ?  |
 
 
 
@@ -44,7 +47,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
 - Création et suppression de catégorie dans la toDoList
-- Début de création des taches de la todolist -> Actuellement erreur
+- Début de création des taches de la todolist
 
 
 #### Outils / Technologies utilisés :
@@ -61,6 +64,8 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
 
 > Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
+
+>Peu de recul sur le temps que me prennent les taches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet
 
 ### Bibliographie :
 

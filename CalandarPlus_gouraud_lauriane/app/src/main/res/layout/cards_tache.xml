@@ -10,7 +10,9 @@
     android:layout_height="wrap_content"
     android:layout_gravity="center_vertical"
     android:layout_margin="@dimen/h_5"
-    android:elevation="@dimen/h_5">
+    android:elevation="@dimen/h_5"
+    android:background="@drawable/rect"
+    android:padding="@dimen/h_2">
 
     <TextView
         android:id="@+id/nom_tache"
@@ -27,6 +29,7 @@
 
         android:layout_alignParentEnd="true"
         android:gravity="center"
+        android:layout_centerVertical="true"
 
         android:contentDescription="@string/delete"
         android:onClick="DeleteTache"

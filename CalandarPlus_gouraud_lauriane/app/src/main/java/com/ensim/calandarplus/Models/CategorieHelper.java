@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+//Permet de faciliter la communication avec la base de données CategorieDB : Création de Categorie, suppression de Categories, recupération de Categorie, etc
 public class CategorieHelper extends SQLiteOpenHelper{
 
     public final static String TAG ="CategorieHelper";

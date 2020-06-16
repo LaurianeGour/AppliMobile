@@ -54,7 +54,6 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         private View itemView;
 
 
-
         public ViewHolder(View itemView) {
             super(itemView);
             Log.d(TAG, "ViewHolder");
@@ -79,7 +78,8 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                     Adapter_categorie.this.todolist_frag.DeleteCategorie(v);
                 }
             });
-
+            //Gestion du listener du bouton d'ajout de tache
+            // (présent dans le layout cards_categorie)
             add_tache.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -91,41 +91,51 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                 }
             });
 
+            //Configure la recyclerView de cette catégorie qui contiendra les taches de catte catégorie
             recyclerView_task.setLayoutManager(new LinearLayoutManager(Adapter_categorie.this.todolist_frag.getContext(), LinearLayoutManager.VERTICAL, false));
 
+            //Helper pour communiquer facilement avec les bases de données
             tache_helper = new TacheHelper(Adapter_categorie.this.todolist_frag.getContext());
             cat_helper = new CategorieHelper(Adapter_categorie.this.todolist_frag.getContext());
         }
 
+        //Met à jour l'affichage des taches
         protected void UpdateDesign_tache() {
             Log.d(TAG, "configureDesign_tache");
-            List<TacheDB.Tache> tache_list = new ArrayList<>();
-            Log.d(TAG, "taille list : "+tache_list.size());
+
             //Lit le contenu de la table catégorie
             SQLiteDatabase db_cat = cat_helper.getReadableDatabase();
-
+            //Lit le contenu de la table tache
             SQLiteDatabase db_tache = tache_helper.getReadableDatabase();
 
             String val = text_categorie_name.getText().toString();
             Log.d(TAG, "nom catégorie : " + val);
+
+            //Requete SQL à l'aide de l'helper de catégorie :
+            //Cherche les lignes de la table catégorie dont le nom de la catégorie vaut le nom de la caégorie selectionné
+            //Renvoit un cursor contenant des id de catégorie
             Cursor cursor_cat = db_cat.query(CategorieDB.Categorie.TABLE,
                     new String[] {CategorieDB.Categorie._ID},
                     CategorieDB.Categorie.COL_CAT_NAME +" = ?" , new String[] {val}, null, null, null
             );
             Log.d(TAG, "Ok avant while cursor");
             int id_cat=-1;
+
             while(cursor_cat.moveToNext()){
                 Log.d(TAG, "Cursor while 1 ");
                 id_cat = cursor_cat.getInt(cursor_cat.getColumnIndex(CategorieDB.Categorie._ID));
             }
-
             cursor_cat.close();
             Log.d(TAG, "cursor_cat.close");
 
+            //Si des taches ont été trouvées (car si aucune tache n'a été trouvé, le while au dessus renvoit false directement)
             if(id_cat != -1){
                 String id = ""+id_cat;
                 Log.d(TAG, id);
 
+                //Requete SQL à l'aide de l'helper de tache :
+                // Cherche les lignes de la tache tache dont la catégorie associé correspond à l'id trouvé plus haut
+                //Renvoit un cursor contenant les Id de catégorie et le nom des taches associées
                 Cursor cursor_tache = db_tache.query(TacheDB.Tache.TABLE,
                         new String[] {TacheDB.Tache.COL_TACHE_NAME, TacheDB.Tache.COL_ID_CAT},
                         TacheDB.Tache.COL_ID_CAT +" = ?" , new String[] {id}, null, null, null
@@ -133,13 +143,16 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
                 Log.d(TAG, "cursor_tache avant while");
 
+                List<TacheDB.Tache> tache_list = new ArrayList<>();
+
+                //Pour chaque tache trouvée ajoute la tache à la liste des taches
                 while(cursor_tache.moveToNext()){
                     Log.d(TAG, "Cursor while");
                     TacheDB.Tache newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
                             cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)));
                     tache_list.add(newTache);
                 }
-                //Affiche les catégories trouvées dans la table dans la recyclerview
+                //convertie la liste des taches dans un format (adapter de tache) pour les afficher dans la recyclerview
                 m_adapter = new Adapter_tache(tache_list, Adapter_categorie.this);
                 recyclerView_task.setAdapter(m_adapter);
                 m_adapter.notifyDataSetChanged();
@@ -154,7 +167,8 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
 
     }
 
-    //Constructeur qui prend en paramètre l'instance du fragment todolist
+    //Constructeur qui prend en paramètre l'instance du fragment todolist pour
+    // pouvoir accèder aux methodes : DeleteCategorie et Add_new_categorie
     public Adapter_categorie(List<CategorieDB.Categorie> list_categorie, ToDoList frag) {
         Log.d(TAG, "ConstructeurAdapteur");
         this.list_categorie = list_categorie;
@@ -192,6 +206,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         return list_categorie.size();
     }
 
+    //Permet de recuperer l'instance du fragment todolist dans l'adapter de taches
     public ToDoList GetTodolist_frag(){
         return todolist_frag;
     }

@@ -7,13 +7,13 @@ package com.ensim.calandarplus.Models;
 import android.provider.BaseColumns;
 import android.util.Log;
 
-//Création des attributs propre à la base de donnée de l'application
+//Création des attributs propre à la base de donnée CategorieDB
 public class CategorieDB {
 
     public static final String DB_NAME = "CalandarPlus";
     public static final int DB_VERSION = 1;
 
-    //Represente une table
+    //Represente une table Categorie
     public static class Categorie implements BaseColumns {
         public static final String TABLE = "Categorie";
         public static final String COL_CAT_NAME = "name";

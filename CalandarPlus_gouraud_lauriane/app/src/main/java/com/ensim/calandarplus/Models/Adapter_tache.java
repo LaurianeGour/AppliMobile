@@ -24,6 +24,7 @@ import butterknife.ButterKnife;
  * Author : Lauriane GOURAUD
  */
 
+//Permet d'afficher facielemnt les taches dans des recyclerview
 public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder>{
 
     private static final String TAG = "AdapterTache";
@@ -47,6 +48,8 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
 
             ButterKnife.bind(this,itemView);
 
+            //Gestion du listener de la textview du om d'une catégorie
+            // (présent dans le layout cards_tache)
             text_tache_name.setOnClickListener(new View.OnClickListener(){
                 @Override
                 public void onClick(View v) {
@@ -57,7 +60,8 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
                     Adapter_tache.this.todolist_frag.Detail_Tache(v);
                 }
             });
-
+            //Gestion du listener du bouton de suppression de tache
+            // (présent dans le layout cards_tache)
             delete_tache.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -71,7 +75,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
         }
     }
 
-    //Constructeur qui prend en paramètre l'instance du fragment todolist
+    //Constructeur qui prend en paramètre l'instance d'un adapter_categorie (pour recuperer ensuite l'instance de la todolist associée)
     public Adapter_tache(List<TacheDB.Tache> list_taches, Adapter_categorie adapter) {
         Log.d(TAG, "ConstructeurAdapteur");
         this.list_taches = list_taches;
@@ -97,7 +101,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
     public void onBindViewHolder(@NonNull Adapter_tache.ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder");
         final TacheDB.Tache tache = list_taches.get(position);
-        Log.d(TAG, "_________________________name tache : "+ tache.getName());
+        Log.d(TAG, "name tache : "+ tache.getName());
         holder.text_tache_name.setText(tache.getName());
     }
 

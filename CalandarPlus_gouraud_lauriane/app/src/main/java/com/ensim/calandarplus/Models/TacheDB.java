@@ -7,10 +7,12 @@ package com.ensim.calandarplus.Models;
 import android.provider.BaseColumns;
 import android.util.Log;
 
+//Création des attributs propre à la base de donnée TacheDB
 public class TacheDB {
     public static final String DB_NAME = "db_tache";
     public static final int DB_VERSION = 1;
 
+    //Represente une table Tache
     public static class Tache implements BaseColumns {
 
         public static final String TAG = "Tache";

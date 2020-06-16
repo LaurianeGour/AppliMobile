@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+//Permet de faciliter la communication avec la base de données TacheDB : Création de tache, suppression de taches, recupération de taches, etc
 public class TacheHelper extends SQLiteOpenHelper{
 
     public final static String TAG ="TacheHelper";

@@ -16,5 +16,7 @@
     <color name="colorBlack">#000000</color>
 
     <color name="background_light">#f0f2f5</color>
+    <color name="background_white">#ffffff</color>
+
     <color name="color_icon">#15305e</color>
 </resources>

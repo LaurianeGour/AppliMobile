@@ -14,27 +14,26 @@
     android:theme="@style/ToolbarTheme"
     android:tint="@color/Text">
 
-    <!-- Image + affichée seulement sur certaines pages -->
-    <ImageView
-        android:id="@+id/Button_add"
+        <!-- Image + affichée seulement sur certaines pages -->
+        <ImageView
+            android:id="@+id/Button_add"
 
-        android:layout_width="@dimen/icon_40"
-        android:layout_height="@dimen/icon_40"
+            android:layout_width="@dimen/icon_40"
+            android:layout_height="@dimen/icon_40"
 
-        android:layout_centerVertical="true"
+            android:layout_centerVertical="true"
 
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
 
-        android:layout_marginEnd="@dimen/marg_40"
-        android:layout_marginStart="@dimen/marg_40"
+            android:layout_marginEnd="@dimen/marg_40"
+            android:layout_marginStart="@dimen/marg_40"
 
-        android:contentDescription="@string/icon_add"
-        android:onClick="onClick"
+            android:contentDescription="@string/icon_add"
+            android:onClick="onClick"
 
-        android:src="@drawable/ic_add"
-        android:tint="@color/color_icon"
-        tools:ignore="OnClick" />
-
+            android:src="@drawable/ic_add"
+            android:tint="@color/color_icon"
+            tools:ignore="OnClick" />
 
 </androidx.appcompat.widget.Toolbar>

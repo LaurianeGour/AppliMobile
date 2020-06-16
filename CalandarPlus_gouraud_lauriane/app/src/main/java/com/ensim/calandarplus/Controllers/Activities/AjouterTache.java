@@ -64,6 +64,8 @@ public class AjouterTache extends AppCompatActivity  implements
         this.configurerToolBar();
         ConfigurerSpinner();
 
+        //Gestion du listener du bouton de validation d'ajout d'une tache
+        // (présent dans le layout activity_ajouter_tache)
         bouton_add_tache.setOnClickListener(new View.OnClickListener() {
             //Pour plus de lisibilité, la fonction est définit plus bas
             @Override
@@ -89,6 +91,7 @@ public class AjouterTache extends AppCompatActivity  implements
         imageadd.setVisibility(View.INVISIBLE);
     }
 
+    //Le spinner contient la liste des catégories existante : pour lier une tache à une catégorie
     public void ConfigurerSpinner(){
         list_categorie = new ArrayList<String>();
         list_id = new ArrayList<Integer>();
@@ -96,46 +99,58 @@ public class AjouterTache extends AppCompatActivity  implements
         CategorieHelper cat_helper = new CategorieHelper(this);
         SQLiteDatabase db = cat_helper.getReadableDatabase();
 
+        //Requete SQL à l'aide de l'helper de catégorie :
+        //Récupere toutes les catégories (id et nom) dans le cursor
         Cursor cursor = db.query(CategorieDB.Categorie.TABLE,
                 new String[] {CategorieDB.Categorie.COL_CAT_NAME, CategorieDB.Categorie._ID},
                 null, null, null, null, null
         );
 
+        //Si le curseur est non nul
         while(cursor.moveToNext()){
             Log.d(TAG, "Cursor while");
+            //Ajoute à la liste de nom decatégorie le nom d'une catégorie
             int index = cursor.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME);
             String cat = cursor.getString(index);
             list_categorie.add(cat);
 
+            //Ajoute à la liste d'id decatégorie l'id d'une catégorie
             int index_id = cursor.getColumnIndex(CategorieDB.Categorie._ID);
             int id_cat = cursor.getInt(index_id);
             list_id.add(id_cat);
+
+            //Choix de le faire sur 2 liste car je ne savais pas comment faire la suite avec seulement 1 liste
+            //Je n'ai pas voulu perdre de temps à faire des recherches supplémentaires
         }
 
         cursor.close();
         db.close();
 
-
-
+        //Transmet la liste des catégorie au spinner à l'aide d'un adapter de string
         ArrayAdapter<String> aa = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, list_categorie);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        //Setting the ArrayAdapter data on the Spinner
+        //associe l'adapteur au spinnet
         spinner_categorie.setAdapter(aa);
     }
 
+    //Recupère l'élement sélectionné du spinner
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(getApplicationContext(),list_categorie.get(position) , Toast.LENGTH_LONG).show();
     }
 
+    //Vide car par défaut une catégorie est renseigner
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
     }
 
+    //S'execute quand le bouton add_tache est enclanché
     public void ValiderAjoutTache(View view) {
         Log.d(TAG, "Valider Ajout tache");
         TacheHelper tache_helper = new TacheHelper(this);
+        //Ouvre la base de donnée de tache en lecture
         SQLiteDatabase db = tache_helper.getWritableDatabase();
+        //Values sera les parametres à reneigner : nom de la tache et id de la catégorie associée
         ContentValues values = new ContentValues();
         Log.d(TAG, "Nom cat : " + edit_text_tache.getText().toString());
         values.put(TacheDB.Tache.COL_TACHE_NAME, edit_text_tache.getText().toString());
@@ -144,9 +159,11 @@ public class AjouterTache extends AppCompatActivity  implements
         int id_categorie = list_id.get(index);
         Log.d(TAG, "id cat : " +id_categorie);
         values.put(TacheDB.Tache.COL_ID_CAT, id_categorie);
+        //Insert une nouvelle tache dans la table tache
         db.insertWithOnConflict(TacheDB.Tache.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
         db.close();
 
+        //Relance l'activité main activity
         Intent intent= new Intent(AjouterTache.this, MainActivity.class);
         startActivity(intent);
     }

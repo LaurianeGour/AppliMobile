@@ -28,7 +28,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/h_40"
             android:onClick="DeleteCategorie"
-            android:text="@string/delete" />
+            android:text="@string/delete"
+            android:layout_marginBottom="@dimen/h_10"/>
 
         <include
             android:id="@+id/include_tache_RV"

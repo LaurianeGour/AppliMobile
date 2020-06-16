@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-    //Affichage du premier fragement : lors sdu lancement de l'application --> agenda de la semaine
+    //Affichage du premier fragement : lors sdu lancement de l'application --> la ToDoList
     private void showFirstFragment(){
         Log.d(TAG, "Affichage 1er Fragment");
         Fragment frag = getSupportFragmentManager().findFragmentById(R.id.frag_init);;
