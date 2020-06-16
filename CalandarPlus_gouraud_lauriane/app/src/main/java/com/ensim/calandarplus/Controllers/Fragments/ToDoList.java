@@ -110,12 +110,16 @@ public class ToDoList extends BaseFragment {
             Log.d(TAG, "Cursor while");
             int index = cursor.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME);
             CategorieDB.Categorie newC_cat = new Categorie(cursor.getString(index));
+            Log.d(TAG, "nom de la catégorie : " + newC_cat.getName());
             categorie_list.add(newC_cat);
         }
+
+        Log.d(TAG, "taille liste catégorie : " + categorie_list.size());
         //Affiche les catégories trouvées dans la table dans la recyclerview
         m_adapter = new Adapter_categorie(categorie_list, ToDoList.this);
         recyclerView_categorie.setAdapter(m_adapter);
         m_adapter.notifyDataSetChanged();
+
         Log.d(TAG, "m_adapteur taille : "+m_adapter.getItemCount());
         cursor.close();
         db.close();

@@ -60,7 +60,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
             this.itemView = itemView;
 
             ButterKnife.bind(this,itemView);
-            Log.d(TAG, "BindVIew ok");
+            Log.d(TAG, "BindVIew ok ");
             configureDesign();
         }
 
@@ -156,6 +156,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                 m_adapter = new Adapter_tache(tache_list, Adapter_categorie.this);
                 recyclerView_task.setAdapter(m_adapter);
                 m_adapter.notifyDataSetChanged();
+
                 Log.d(TAG, "m_adapteur taille : "+m_adapter.getItemCount());
                 cursor_tache.close();
             }
@@ -173,6 +174,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         Log.d(TAG, "ConstructeurAdapteur");
         this.list_categorie = list_categorie;
         this.todolist_frag = frag;
+        Log.d(TAG, "\n================================================================================== Taille liste de catégorie : "+ this.list_categorie.size());
     }
 
 
@@ -180,7 +182,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
     @NonNull
     @Override
     public Adapter_categorie.ViewHolder onCreateViewHolder(ViewGroup parent,int viewType) {
-        Log.d(TAG, "onCreateViewHolder");
+        Log.d(TAG, "\n_________________________________________________________________________________________ onCreateViewHolder");
 
         context = parent.getContext();
         //Lie chaque instance de ViewHolder à un layout cards_categorie
@@ -194,8 +196,9 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
         Log.d(TAG, "onBindViewHolder");
         final CategorieDB.Categorie categorie = list_categorie.get(position);
 
-        Log.d(TAG, "_____name : "+ categorie.getName());
+        Log.d(TAG, "name : "+ categorie.getName());
         holder.text_categorie_name.setText(categorie.getName());
+        Log.d(TAG, "\n--------------------------------------------------- : " + holder.text_categorie_name.getText().toString());
         holder.UpdateDesign_tache();
     }
 
