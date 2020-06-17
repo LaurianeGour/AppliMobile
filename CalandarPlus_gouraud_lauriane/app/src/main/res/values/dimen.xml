@@ -24,6 +24,10 @@
     <dimen name="h_5">5dp</dimen>
     <dimen name="h_2">2dp</dimen>
 
+    <!-- Taille Texte -->
+    <dimen name="titre_page">20sp</dimen>
+    <dimen name="nom_champ">15sp</dimen>
+
     <!-- Autres dimensions -->
     <dimen name="header_menu_height">170dp</dimen>
     <dimen name="h_toolbar_50" >50dp</dimen>

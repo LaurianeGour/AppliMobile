@@ -10,7 +10,7 @@ import android.util.Log;
 //Création des attributs propre à la base de donnée TacheDB
 public class TacheDB {
     public static final String DB_NAME = "db_tache";
-    public static final int DB_VERSION = 1;
+    public static final int DB_VERSION = 2;
 
     //Represente une table Tache
     public static class Tache implements BaseColumns {
@@ -24,12 +24,14 @@ public class TacheDB {
 
         private String name;
         private int id_cat;
+        private int id;
 
 
-        public Tache(String name, int id){
+        public Tache(String name, int id_cat, int id){
             Log.d(TAG, "constructeur");
             this.name = name;
-            this.id_cat = id;
+            this.id_cat = id_cat;
+            this.id = id;
         }
 
         public String getName() {
@@ -40,12 +42,16 @@ public class TacheDB {
             this.name = name;
         }
 
-        public int GetId(){
+        public int GetIdCat(){
             return id_cat;
         }
 
-        public void SetId(int id){
+        public void SetIdCat(int id){
             this.id_cat = id;
+        }
+
+        public int getId(){
+            return this.id;
         }
 
 

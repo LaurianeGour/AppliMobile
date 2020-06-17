@@ -37,7 +37,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 14/06|  5h30  | 28h30 |
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
-| 17/06 | de 9h30 -> | ?  |
+| 17/06 | 2h | 40h  |
 
 
 
@@ -76,11 +76,11 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - https://www.developpez.com
 - https://www.javatpoint.com
 - https://www.geeksforgeeks.org/
+- https://openclassrooms.com/forum
 
 - https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
 - https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
 
-- https://openclassrooms.com/forum/sujet/android-cacher-le-clavier
 - http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
 - https://www.javatpoint.com/android-spinner-example
 

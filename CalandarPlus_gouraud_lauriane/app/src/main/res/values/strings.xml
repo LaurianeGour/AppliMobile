@@ -33,11 +33,17 @@
     <string name="add_new_categorie">Ajouter nouvelle catégorie à la ToDoList</string>
     <string name="add_categorie_2lignes">Ajouter une \ncatégorie</string>
 
+    <!-- pour le détail d'une tache -->
+    <string name="detail">Détail</string>
+    <string name="nom_tache">Nom de la tache : </string>
+    <string name="nom_categorie">Nom de la catégorie : </string>
+
     <!-- Autre-->
     <string name="add">Ajouter</string>
     <string name="cancel">Annuler</string>
     <string name="delete">Supprimer</string>
     <string name="ok">Ok</string>
+
 
 
 </resources>

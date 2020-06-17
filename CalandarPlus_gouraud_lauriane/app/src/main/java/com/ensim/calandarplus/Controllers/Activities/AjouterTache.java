@@ -42,7 +42,7 @@ public class AjouterTache extends AppCompatActivity  implements
 
     private static String TAG = "Ajouter Tache";
 
-    //Definition des éléments de la vu (activity_main.xml)
+    //Definition des éléments de la vu (activity_ajouter_tache.xml)
     @BindView(R.id.include_toolbar) Toolbar toolbar;
     @BindView(R.id.editText_ajouter_tache) EditText edit_text_tache;
     @BindView(R.id.spinner_lst_cat) Spinner spinner_categorie;
@@ -58,11 +58,11 @@ public class AjouterTache extends AppCompatActivity  implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajouter_tache);
 
-        //Récupération des éléments de la vu (activity_main.xml)
+        //Récupération des éléments de la vu (activity_ajouter_tache.xml)
         ButterKnife.bind(this);
 
         this.configurerToolBar();
-        ConfigurerSpinner();
+        this.ConfigurerSpinner();
 
         //Gestion du listener du bouton de validation d'ajout d'une tache
         // (présent dans le layout activity_ajouter_tache)
@@ -176,8 +176,6 @@ public class AjouterTache extends AppCompatActivity  implements
         //Insert une nouvelle tache dans la table tache
         db.insertWithOnConflict(TacheDB.Tache.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
         db.close();
-
-
 
         //Relance l'activité main activity
         Intent intent= new Intent(AjouterTache.this, MainActivity.class);

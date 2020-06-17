@@ -41,6 +41,8 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
         @BindView(R.id.delete_tache)  ImageView delete_tache;
         private View itemView;
 
+        private int id;
+
         public ViewHolder(View itemView) {
             super(itemView);
             Log.d(TAG, "ViewHolder");
@@ -57,7 +59,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
                     //Utilisation de l'instance du fragment récupéré dans le constructeur de Adapter_tache
                     // pour appeler la méthode Detail_Tache du fragment ToDoList
                     // sur un champ de texte du layout cards_tache
-                    Adapter_tache.this.todolist_frag.Detail_Tache(v);
+                    Adapter_tache.this.todolist_frag.Detail_Tache(v, id);
                 }
             });
             //Gestion du listener du bouton de suppression de tache
@@ -103,6 +105,7 @@ public class Adapter_tache extends RecyclerView.Adapter<Adapter_tache.ViewHolder
         final TacheDB.Tache tache = list_taches.get(position);
         Log.d(TAG, "name tache : "+ tache.getName());
         holder.text_tache_name.setText(tache.getName());
+        holder.id = tache.getId();
     }
 
     // Retourne le nombre d'élements (ici tache) existantes

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ensim.calandarplus.Controllers.Activities.DetailsTache">
+
+    <!-- toolbar définie dans toolbar.xml-->
+
+    <include
+        android:id="@+id/include_toolbar_detail_tache"
+        layout="@layout/toolbar"
+
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="180dp" />
+
+    <TextView
+        android:id="@+id/details_tache"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/h_10"
+
+        android:gravity="center"
+        android:text="@string/detail"
+        android:textSize="18sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_toolbar_detail_tache" />
+
+    <TextView
+        android:id="@+id/titre_nom_tache_detail"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/nom_tache"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_tache"
+
+        android:layout_marginTop="@dimen/h_10"
+        android:layout_marginStart="@dimen/h_40"
+        android:layout_marginEnd="@dimen/h_10"/>
+
+    <TextView
+        android:id="@+id/nom_tache_detail"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toEndOf="@+id/titre_nom_tache_detail"
+        app:layout_constraintTop_toBottomOf="@+id/details_tache"
+
+        android:layout_marginTop="@dimen/h_10"
+        android:layout_marginEnd="@dimen/h_10"/>
+
+    <TextView
+        android:id="@+id/titre_nom_cat_detail"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/nom_categorie"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail"
+
+        android:layout_marginTop="@dimen/h_10"
+        android:layout_marginStart="@dimen/h_40"
+        android:layout_marginEnd="@dimen/h_10"/>
+
+    <TextView
+        android:id="@+id/nom_cat_detail"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintStart_toEndOf="@+id/titre_nom_cat_detail"
+        app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail"
+
+        android:layout_marginTop="@dimen/h_10"
+        android:layout_marginEnd="@dimen/h_10"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

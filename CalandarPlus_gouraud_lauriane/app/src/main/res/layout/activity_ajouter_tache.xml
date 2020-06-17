@@ -10,35 +10,38 @@
     tools:context="com.ensim.calandarplus.Controllers.Activities.AjouterTache">
 
     <!-- toolbar définie dans toolbar.xml-->
-
     <include
         android:id="@+id/include_toolbar"
         layout="@layout/toolbar"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="180dp" />
 
+
     <TextView
         android:id="@+id/Text_tache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/h_10"
+        android:layout_margin="@dimen/h_10"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="@string/ajouter_tache"
-        app:layout_constraintTop_toBottomOf="@+id/include_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/include_toolbar"
+
+        android:textSize="@dimen/nom_champ"
+        android:text="@string/ajouter_tache"/>
 
     <EditText
         android:id="@+id/editText_ajouter_tache"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/h_10"
+        android:layout_margin="@dimen/h_10"
 
         android:autofillHints="@string/add_tache"
         android:gravity="center"
-        android:inputType="text"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@+id/Text_tache" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_tache"
+
+        android:inputType="textMultiLine"/>
 
     <TextView
         android:id="@+id/Text_categorie"
@@ -48,8 +51,10 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ajouter_tache"
+
         android:text="@string/categorie"
-        app:layout_constraintTop_toBottomOf="@+id/editText_ajouter_tache" />
+        android:textSize="@dimen/nom_champ" />
 
     <Spinner
         android:id="@+id/spinner_lst_cat"

@@ -26,6 +26,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.ensim.calandarplus.Controllers.Activities.AjouterTache;
+import com.ensim.calandarplus.Controllers.Activities.DetailsTache;
 import com.ensim.calandarplus.Controllers.Activities.MainActivity;
 import com.ensim.calandarplus.Models.Adapter_categorie;
 import com.ensim.calandarplus.Models.CategorieDB.Categorie;
@@ -224,8 +225,11 @@ public class ToDoList extends BaseFragment {
         updateDesign();
     }
 
-    public void Detail_Tache(View v){
+    public void Detail_Tache(View v, int id){
         Log.d(TAG, "Detail_Tache");
+        Intent intent= new Intent(getContext(), DetailsTache.class);
+        intent.putExtra("id_tache", id);
+        startActivity(intent);
     }
 
     public void AddTache(View v, String text_categorie_name){
