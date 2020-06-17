@@ -131,6 +131,15 @@ public class AjouterTache extends AppCompatActivity  implements
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //associe l'adapteur au spinnet
         spinner_categorie.setAdapter(aa);
+
+        Bundle extras = getIntent().getExtras();
+        if(extras != null){
+            String nom_categorie = extras.getString("nom_cat");
+            int spinnerPosition = aa.getPosition(nom_categorie);
+
+            //set the default according to value
+            spinner_categorie.setSelection(spinnerPosition);
+        }
     }
 
     //Recupère l'élement sélectionné du spinner

@@ -231,6 +231,7 @@ public class ToDoList extends BaseFragment {
     public void AddTache(View v, String text_categorie_name){
         Log.d(TAG, "AddTache");
         Intent intent= new Intent(getContext(), AjouterTache.class);
+        intent.putExtra("nom_cat", text_categorie_name);
         startActivity(intent);
     }
 

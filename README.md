@@ -80,6 +80,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - https://openclassrooms.com/fr/courses/2023346-creez-des-applications-pour-android
 - https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
 
+- https://openclassrooms.com/forum/sujet/android-cacher-le-clavier
 - http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
 - https://www.javatpoint.com/android-spinner-example
 
