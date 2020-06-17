@@ -147,6 +147,11 @@ public class AjouterTache extends AppCompatActivity  implements
     //S'execute quand le bouton add_tache est enclanché
     public void ValiderAjoutTache(View view) {
         Log.d(TAG, "Valider Ajout tache");
+
+        //Enleve automatiquemet la selection de l'edittext
+        edit_text_tache.setEnabled(false);
+        edit_text_tache.setEnabled(true);
+
         TacheHelper tache_helper = new TacheHelper(this);
         //Ouvre la base de donnée de tache en lecture
         SQLiteDatabase db = tache_helper.getWritableDatabase();
@@ -162,6 +167,8 @@ public class AjouterTache extends AppCompatActivity  implements
         //Insert une nouvelle tache dans la table tache
         db.insertWithOnConflict(TacheDB.Tache.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
         db.close();
+
+
 
         //Relance l'activité main activity
         Intent intent= new Intent(AjouterTache.this, MainActivity.class);

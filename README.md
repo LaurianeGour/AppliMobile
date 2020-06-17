@@ -37,6 +37,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 14/06|  5h30  | 28h30 |
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
+| 17/06 | de 9h30 -> | ?  |
 
 
 
@@ -47,7 +48,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
 - Création et suppression de catégorie dans la toDoList
-- Début de création des taches de la todolist
+- Création et suppression de taches associé à des catégorie pour la todolist
 
 
 #### Outils / Technologies utilisés :
@@ -65,7 +66,8 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
 > Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
 
->Peu de recul sur le temps que me prennent les taches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet
+
+>Peu de recul sur le temps que me prendraient les tâches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet
 
 ### Bibliographie :
 
@@ -88,3 +90,4 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
 - https://www.youtube.com/watch?v=8L5sJQ44ntY *vidéo tutoriel todolist*
 - https://www.youtube.com/watch?v=wzcFPFCYjFQ *vidéo tutoriel HorizontalScrollView*
+- https://www.youtube.com/watch?v=5ISNPFmuOU8 *mettre les bons layout (relative, linear, etc) pour utiliser les recyclerview*

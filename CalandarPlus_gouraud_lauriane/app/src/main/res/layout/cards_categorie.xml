@@ -10,42 +10,45 @@
     android:layout_height="wrap_content"
     android:layout_margin="5dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_margin="@dimen/h_5">
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/h_5">
 
-        <TextView
-            android:id="@+id/nom_categorie"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/h_20"
-            android:baselineAlignBottom="true"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/h_5"/>
+            <TextView
+                android:id="@+id/nom_categorie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAlignBottom="true"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/h_5"/>
 
-        <Button
-            android:id="@+id/delete_categorie"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/h_40"
-            android:onClick="DeleteCategorie"
-            android:text="@string/delete"
-            android:layout_marginBottom="@dimen/h_10"/>
+            <Button
+                android:id="@+id/delete_categorie"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:onClick="DeleteCategorie"
+                android:text="@string/delete"
+                android:layout_marginBottom="@dimen/h_10"/>
 
-        <include
-            android:id="@+id/include_tache_RV"
-            layout="@layout/recyclerview_tache"
-            android:layout_width="@dimen/h_150"
-            android:layout_height="wrap_content"/>
+            <include
+                android:id="@+id/include_tache_RV"
+                layout="@layout/recyclerview_tache"
+                android:layout_width="@dimen/h_150"
+                android:layout_height="wrap_content"/>
 
-        <Button
-            android:id="@+id/Add_tache_cat"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/h_40"
-            android:text="@string/ajouter_tache"
-            android:onClick="AddTache"/>
-
-    </LinearLayout>
-
+            <Button
+                android:id="@+id/Add_tache_cat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:text="@string/ajouter_tache"
+                android:onClick="AddTache"
+                android:layout_marginBottom="@dimen/h_10"/>
+        </LinearLayout>
+    </ScrollView>
 </androidx.cardview.widget.CardView>
