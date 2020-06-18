@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (this.frag_agenda_semaine == null) this.frag_agenda_semaine = AgendaSemaine.newInstance();
         this.startTransactionFragment(this.frag_agenda_semaine);
         TAG="AgendaSemaine";
-        setTitle(TAG);
+        setTitle(R.string.ag_semaine);
         //Rends invisible le bouton + de la toolbar
         imageadd.setVisibility(View.INVISIBLE);
         Log.d(TAG, "New Fragment");
@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (this.frag_agenda_jour == null) this.frag_agenda_jour = AgendaJour.newInstance();
         this.startTransactionFragment(this.frag_agenda_jour);
         TAG="AgendaJour";
-        setTitle(TAG);
+        setTitle(R.string.ag_jour);
         //Rends invisible le bouton + de la toolbar
         imageadd.setVisibility(View.INVISIBLE);
         Log.d(TAG, "New Fragment");
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (this.frag_gerer_agendas == null) this.frag_gerer_agendas = GererAgendas.newInstance();
         this.startTransactionFragment(this.frag_gerer_agendas);
         TAG="GererAgendas";
-        setTitle(TAG);
+        setTitle(R.string.gere_agenda);
         //Rends visible le bouton + de la toolbar
         imageadd.setVisibility(View.VISIBLE);
         Log.d(TAG, "New Fragment");
@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (this.frag_todolist== null) this.frag_todolist = ToDoList.newInstance();
         this.startTransactionFragment(this.frag_todolist);
         TAG="ToDoList";
-        setTitle(TAG);
+        setTitle(R.string.todolist);
         //Rends visible le bouton + de la toolbar
         imageadd.setVisibility(View.VISIBLE);
         Log.d(TAG, "New Fragment");
@@ -194,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (this.frag_parametres== null) this.frag_parametres = Parametres.newInstance();
         this.startTransactionFragment(this.frag_parametres);
         TAG="Parametres";
-        setTitle(TAG);
+        setTitle(R.string.parametres);
         //Rends invisible le bouton + de la toolbar
         imageadd.setVisibility(View.INVISIBLE);
         Log.d(TAG, "New Fragment");

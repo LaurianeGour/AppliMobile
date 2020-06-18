@@ -13,7 +13,7 @@
     <include
         layout="@layout/toolbar"/>
 
-    <!-- Contenu : rien pour l'instant -->
+    <!-- Contenu : non implémenté -->
     <TextView
         android:id="@+id/zone_texte_add_ag"
         android:layout_width="match_parent"

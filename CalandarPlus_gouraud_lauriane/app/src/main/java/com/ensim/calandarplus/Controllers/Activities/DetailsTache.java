@@ -45,8 +45,10 @@ public class DetailsTache extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         id_tache=extras.getInt("id_tache");
+        Log.d(TAG, "id_tache : "+id_tache);
 
         this.configurerToolBar();
+        Log.d(TAG, "Configuration Toolbar ok");
 
         this.ConfigurerTextView();
     }
@@ -60,7 +62,7 @@ public class DetailsTache extends AppCompatActivity {
             //Affiche le bouton retour vers la page précédente
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-        setTitle(TAG);
+        setTitle(R.string.details_tache);
         //Rends invisible le bouton + de la toolbar
         imageadd.setVisibility(View.INVISIBLE);
     }
@@ -80,17 +82,26 @@ public class DetailsTache extends AppCompatActivity {
                 new String[] {TacheDB.Tache.COL_TACHE_NAME, TacheDB.Tache.COL_ID_CAT},
                 TacheDB.Tache._ID +" = ?" , new String[] {String.valueOf(id_tache)}, null, null, null
         );
+
         while(cursor_tache.moveToNext()){
+            Log.d(TAG, "Cursor tache non null");
             nom_tache.setText(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)));
             String id_cat = cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT));
-
+            Log.d(TAG, "Recuperation non tache et id catégorie");
+            Log.d(TAG, "id catégorie : " + id_cat);
             SQLiteDatabase db_cat = cat_helper.getReadableDatabase();
             Cursor cursor_cat = db_cat.query(CategorieDB.Categorie.TABLE,
-                    new String[] {CategorieDB.Categorie.COL_CAT_NAME},
+                    new String[] {CategorieDB.Categorie.COL_CAT_NAME, CategorieDB.Categorie._ID},
                     CategorieDB.Categorie._ID +" = ?" , new String[] {id_cat}, null, null, null
             );
             while(cursor_cat.moveToNext()){
-                nom_cat.setText(cursor_cat.getString(cursor_tache.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME)));
+                 Log.d(TAG, "Cursor catégorie non null");
+                int index = cursor_cat.getColumnIndex(CategorieDB.Categorie.COL_CAT_NAME);
+                Log.d(TAG, "Index : "+index);
+                String cat = cursor_cat.getString(index);
+                Log.d(TAG, "Nom catégorie : " + cat);
+                nom_cat.setText(cat);
+                Log.d(TAG, "Recuperation nom catégorie");
             }
             db_cat.close();
         }

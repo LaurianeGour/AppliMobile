@@ -21,11 +21,13 @@
     <!-- Création / nom pages -->
     <string name="jour">Jour</string>
     <string name="semaine">Semaine</string>
-    <string name="icon_add">Icon add</string>
+    <string name="icon_add">Icon ajouter</string>
     <string name="add_event">Ajouter un evenement</string>
     <string name="ajouter_tache">Ajouter Tâche</string>
     <string name="add_agenda">Ajouter un agenda</string>
     <string name="add_tache">Ajouter une tâche</string>
+    <string name="ag_semaine">Agenda de la semaine</string>
+    <string name="ag_jour">Agenda de la journée</string>
 
     <!-- Pour la ToDoList -->
     <string name="categorie">Catégorie</string>
@@ -37,6 +39,7 @@
     <string name="detail">Détail</string>
     <string name="nom_tache">Nom de la tache : </string>
     <string name="nom_categorie">Nom de la catégorie : </string>
+    <string name="details_tache">Détails d\'une tache</string>
 
     <!-- Autre-->
     <string name="add">Ajouter</string>

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context="com.ensim.calandarplus.Controllers.Fragments.AgendaSemaine">
 
-    <!-- Contenu : rien pour l'instant -->
+    <!-- Contenu : Non implémenté -->
     <TextView
         android:id="@+id/zone_texte_frag_semaine"
         android:layout_width="match_parent"

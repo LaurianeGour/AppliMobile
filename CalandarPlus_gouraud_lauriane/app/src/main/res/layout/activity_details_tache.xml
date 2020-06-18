@@ -15,75 +15,106 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="180dp" />
 
-    <TextView
-        android:id="@+id/details_tache"
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RL_nom_tache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/h_5"
 
-        android:layout_marginTop="@dimen/h_10"
+        android:layout_marginTop="10dp"
 
-        android:gravity="center"
-        android:text="@string/detail"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:background="@drawable/rect"
+        android:elevation="@dimen/h_5"
+        android:minWidth="@dimen/h_150"
+        android:paddingStart="@dimen/h_20"
 
+        android:paddingTop="@dimen/h_5"
+        android:paddingEnd="@dimen/h_20"
+
+        android:paddingBottom="@dimen/h_5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include_toolbar_detail_tache" />
+        app:layout_constraintTop_toBottomOf="@+id/include_toolbar_detail_tache">
 
-    <TextView
-        android:id="@+id/titre_nom_tache_detail"
+        <TextView
+            android:id="@+id/titre_nom_tache_detail"
 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/nom_tache"
+            android:textSize="@dimen/titre_page"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@+id/RL_nom_tache"
+            app:layout_constraintTop_toTopOf="@+id/RL_nom_tache" />
+
+        <TextView
+            android:id="@+id/nom_tache_detail"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/h_20"
+
+            android:textSize="@dimen/titre_page"
+            android:textStyle="italic"
+
+            app:layout_constraintStart_toStartOf="@+id/RL_nom_tache"
+            app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RL_nom_cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/h_5"
 
-        android:text="@string/nom_tache"
+        android:layout_marginTop="10dp"
 
+        android:background="@drawable/rect"
+        android:elevation="@dimen/h_5"
+        android:minWidth="@dimen/h_150"
+        android:paddingStart="@dimen/h_20"
+
+        android:paddingTop="@dimen/h_5"
+        android:paddingEnd="@dimen/h_20"
+
+        android:paddingBottom="@dimen/h_5"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/details_tache"
+        app:layout_constraintTop_toBottomOf="@+id/RL_nom_tache">
 
-        android:layout_marginTop="@dimen/h_10"
-        android:layout_marginStart="@dimen/h_40"
-        android:layout_marginEnd="@dimen/h_10"/>
+        <TextView
+            android:id="@+id/titre_nom_cat_detail"
 
-    <TextView
-        android:id="@+id/nom_tache_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:text="@string/nom_categorie"
+            android:textSize="@dimen/titre_page"
+            android:textStyle="bold"
 
-        app:layout_constraintStart_toEndOf="@+id/titre_nom_tache_detail"
-        app:layout_constraintTop_toBottomOf="@+id/details_tache"
+            app:layout_constraintStart_toStartOf="@+id/RL_nom_cat"
+            app:layout_constraintTop_toTopOf="@+id/RL_nom_cat" />
 
-        android:layout_marginTop="@dimen/h_10"
-        android:layout_marginEnd="@dimen/h_10"/>
+        <TextView
+            android:id="@+id/nom_cat_detail"
 
-    <TextView
-        android:id="@+id/titre_nom_cat_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/h_20"
 
-        android:text="@string/nom_categorie"
+            android:textSize="@dimen/titre_page"
+            android:textStyle="italic"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail"
+            app:layout_constraintStart_toStartOf="@+id/RL_nom_cat"
+            app:layout_constraintTop_toBottomOf="@+id/titre_nom_cat_detail" />
 
-        android:layout_marginTop="@dimen/h_10"
-        android:layout_marginStart="@dimen/h_40"
-        android:layout_marginEnd="@dimen/h_10"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/nom_cat_detail"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintStart_toEndOf="@+id/titre_nom_cat_detail"
-        app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail"
-
-        android:layout_marginTop="@dimen/h_10"
-        android:layout_marginEnd="@dimen/h_10"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

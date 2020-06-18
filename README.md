@@ -20,7 +20,7 @@ Objectif au 16/06 : Faire une ToDoList la plus complete possible
 ## Suivit de projet :
 ### Developpement :
 
-#### Temps de developpement actuel : entre 40 et 45 heures :
+#### Temps de developpement : entre 40 et 45 heures
 
 Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
@@ -38,7 +38,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
 | 17/06 | 2h | 40h  |
-
+| 18/06 | 14h ->  | ?  |
 
 
 #### Détails du projet :
@@ -56,6 +56,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Utilisation des log
 - Pour apprendre à personnaliser mes layout : HorizontalScrollView / RecyclerView / Include(layout) / etc
 - Bases de données et tables locales (SQLite)
+- Utilisation d'activités et de fragments
 
 ### Difficultés rencontrées :
 > Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
