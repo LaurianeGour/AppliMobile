@@ -11,7 +11,7 @@
 ## Fonctionnalités prévues initialement :
 - Actualisation de l’emploi du temps de l’université à intervalle de temps choisit par l’utilisateur -> utilisation d’une API -> Abandonné le 16/06
 - Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
-- Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement. -> Abandonné le 16/0+
+- Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement. -> Abandonné le 16/06
 - Pouvoir noter et catégoriser les taches à faire.
 - Pouvoir indiquer l’état d’avancement d’une tache.
 

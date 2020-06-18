@@ -19,20 +19,21 @@
         android:id="@+id/RL_nom_tache"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/h_5"
+        android:layout_marginStart="20dp"
 
         android:layout_marginTop="10dp"
-
         android:background="@drawable/rect"
+        android:backgroundTint="@color/background_light"
+
+
         android:elevation="@dimen/h_5"
         android:minWidth="@dimen/h_150"
-        android:paddingStart="@dimen/h_20"
 
+        android:paddingStart="@dimen/h_20"
         android:paddingTop="@dimen/h_5"
         android:paddingEnd="@dimen/h_20"
-
         android:paddingBottom="@dimen/h_5"
-        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include_toolbar_detail_tache">
 
@@ -69,20 +70,20 @@
         android:id="@+id/RL_nom_cat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/h_5"
+        android:layout_marginStart="20dp"
 
         android:layout_marginTop="10dp"
-
         android:background="@drawable/rect"
+        android:backgroundTint="@color/background_light"
+
         android:elevation="@dimen/h_5"
         android:minWidth="@dimen/h_150"
-        android:paddingStart="@dimen/h_20"
 
+        android:paddingStart="@dimen/h_20"
         android:paddingTop="@dimen/h_5"
         android:paddingEnd="@dimen/h_20"
-
         android:paddingBottom="@dimen/h_5"
-        app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RL_nom_tache">
 
@@ -114,7 +115,4 @@
             app:layout_constraintTop_toBottomOf="@+id/titre_nom_cat_detail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
