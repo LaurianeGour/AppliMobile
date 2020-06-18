@@ -38,7 +38,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
 | 17/06 | 2h | 40h  |
-| 18/06 | 14h ->  | ?  |
+| 18/06 | 2h40 + 17h45 -> | ?  |
 
 
 #### Détails du projet :
@@ -49,6 +49,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Developpement de la navigation entre les pages
 - Création et suppression de catégorie dans la toDoList
 - Création et suppression de taches associé à des catégorie pour la todolist
+- Modification des taches
 
 
 #### Outils / Technologies utilisés :
@@ -70,6 +71,8 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 
 >Peu de recul sur le temps que me prendraient les tâches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet
 
+> Ordinateur parfois lent : Il arrivait régulièrement que mon ordinateur arrete de réagire pendant ~ 1 min (legère perte de temps et déconcentration)
+
 ### Bibliographie :
 
 - https://developer.android.com
@@ -83,7 +86,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - https://openclassrooms.com/fr/courses/4568596-construisez-une-interface-utilisateur-flexible-et-adaptative
 
 - http://fr.charles.lescampeurs.org/android-centrer-texte-horizontalement-verticalement-textview/
-- https://www.javatpoint.com/android-spinner-example
+- https://mkyong.com/java8/java-8-convert-map-to-list/
 
 - https://github.com/JakeWharton/butterknife
 - https://github.com/frankiesardo/icepick

@@ -34,12 +34,14 @@
     <string name="add_categorie">Ajouter une catégorie</string>
     <string name="add_new_categorie">Ajouter nouvelle catégorie à la ToDoList</string>
     <string name="add_categorie_2lignes">Ajouter une \ncatégorie</string>
+    <string name="erreur_categorie">La catégorie existe déja</string>
 
     <!-- pour le détail d'une tache -->
     <string name="detail">Détail</string>
     <string name="nom_tache">Nom de la tache : </string>
     <string name="nom_categorie">Nom de la catégorie : </string>
     <string name="details_tache">Détails d\'une tache</string>
+    <string name="erreur_modif_tache">Erreur dans la modification de la tâche</string>
 
     <!-- Autre-->
     <string name="add">Ajouter</string>
@@ -47,7 +49,6 @@
     <string name="delete">Supprimer</string>
     <string name="ok">Ok</string>
     <string name="valider">Valider</string>
-
 
 
 </resources>

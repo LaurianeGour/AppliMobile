@@ -3,13 +3,19 @@ package com.ensim.calandarplus.Controllers.Activities;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
+import android.app.AlertDialog;
+import android.content.ContentValues;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -22,6 +28,7 @@ import com.example.calandarplus.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 import butterknife.BindView;
@@ -141,30 +148,40 @@ public class DetailsTache extends AppCompatActivity {
 
     public void EnregisterModif(View view) {
         Log.d(TAG, "EnregisterModif");
-        /*
-         String new_categorie = String.valueOf(categorieEditText.getText());
-        Log.d(TAG, "Nouvelle catégorie : "+new_categorie);
-        if(VerifCategorieNotExist(new_categorie)){
-            SQLiteDatabase db = cat_helper.getWritableDatabase();
+        String nom_tache_new = nom_tache.getText().toString();
+        String nom_categorie_new = nom_cat.getSelectedItem().toString();
+        Log.d(TAG, "nom tache : " +nom_tache_new + " | nom catégorie : " +nom_categorie_new );
+        int id_categorie=-1;
+        for(Map.Entry categorie : list_cat.entrySet()){
+            if(categorie.getValue().toString().compareTo(nom_categorie_new) ==0){
+                id_categorie = (int) categorie.getKey();
+            }
+        }
+        Log.d(TAG, "id catégorie : "+id_categorie);
+        if(id_categorie!=-1){
+            SQLiteDatabase db_tache = tache_helper.getWritableDatabase();
             ContentValues values = new ContentValues();
-            values.put(Categorie.COL_CAT_NAME, new_categorie);
-            db.insertWithOnConflict(Categorie.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-            db.close();
-            updateDesign();
+            values.put(TacheDB.Tache.COL_ID_CAT, id_categorie);
+            values.put(TacheDB.Tache.COL_TACHE_NAME, nom_tache_new);
+            db_tache.update(TacheDB.Tache.TABLE, values, TacheDB.Tache._ID + "=" + id_tache, null);
+            db_tache.close();
+
+            //Relance l'activité main activity
+            Intent intent= new Intent(DetailsTache.this, MainActivity.class);
+            startActivity(intent);
         }else{
-            AlertDialog erreur_add_categorie = new AlertDialog.Builder(view.getContext())
-                    .setMessage("La catégorie existe déja")
+            AlertDialog erreur_modif = new AlertDialog.Builder(view.getContext())
+                    .setMessage(R.string.erreur_modif_tache)
                     .setPositiveButton(R.string.ok,new DialogInterface.OnClickListener(){
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            updateDesign();
+                            dialog.cancel();
                         }
                     } )
                     .create();
-            erreur_add_categorie.show();
-            Button buttonPositive = erreur_add_categorie.getButton(DialogInterface.BUTTON_POSITIVE);
-            buttonPositive.setTextColor(ContextCompat.getColor(getContext(), R.color.Text));
-          }
-         */
+            erreur_modif.show();
+            Button buttonPositive = erreur_modif.getButton(DialogInterface.BUTTON_POSITIVE);
+            buttonPositive.setTextColor(ContextCompat.getColor(this, R.color.Text));
+        }
     }
 }

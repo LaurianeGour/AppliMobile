@@ -149,7 +149,7 @@ public class ToDoList extends BaseFragment {
                             updateDesign();
                         }else{
                             AlertDialog erreur_add_categorie = new AlertDialog.Builder(view.getContext())
-                                    .setMessage("La catégorie existe déja")
+                                    .setMessage(R.string.erreur_categorie)
                                     .setPositiveButton(R.string.ok,new DialogInterface.OnClickListener(){
                                         @Override
                                         public void onClick(DialogInterface dialog, int which) {
