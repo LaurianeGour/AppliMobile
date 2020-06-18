@@ -38,7 +38,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
 | 17/06 | 2h | 40h  |
-| 18/06 | 2h40 + 17h45 -> | ?  |
+| 18/06 | 2h40 + 17h45 -> 19h20 | ?  |
 
 
 #### Détails du projet :
@@ -50,7 +50,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Création et suppression de catégorie dans la toDoList
 - Création et suppression de taches associé à des catégorie pour la todolist
 - Modification des taches
-
+- Ajouter un values-en -> strings.xml permettant de passer l'application en anglais (si le smartphone est en anglais)
 
 #### Outils / Technologies utilisés :
 - Utilisation des librairies Butterrknife et Icepick
