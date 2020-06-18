@@ -93,8 +93,8 @@ public class AjouterTache extends AppCompatActivity  implements
 
     //Le spinner contient la liste des catégories existante : pour lier une tache à une catégorie
     public void ConfigurerSpinner(){
-        list_categorie = new ArrayList<String>();
-        list_id = new ArrayList<Integer>();
+        list_categorie = new ArrayList<>();
+        list_id = new ArrayList<>();
 
         CategorieHelper cat_helper = new CategorieHelper(this);
         SQLiteDatabase db = cat_helper.getReadableDatabase();
@@ -127,7 +127,7 @@ public class AjouterTache extends AppCompatActivity  implements
         db.close();
 
         //Transmet la liste des catégorie au spinner à l'aide d'un adapter de string
-        ArrayAdapter<String> aa = new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, list_categorie);
+        ArrayAdapter<String> aa = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, list_categorie);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //associe l'adapteur au spinnet
         spinner_categorie.setAdapter(aa);
@@ -171,7 +171,7 @@ public class AjouterTache extends AppCompatActivity  implements
         String nom_cat = spinner_categorie.getSelectedItem().toString();
         int index = list_categorie.indexOf(nom_cat);
         int id_categorie = list_id.get(index);
-        Log.d(TAG, "id cat : " +id_categorie);
+        Log.d(TAG, "____________________________________id cat : " +id_categorie);
         values.put(TacheDB.Tache.COL_ID_CAT, id_categorie);
         //Insert une nouvelle tache dans la table tache
         db.insertWithOnConflict(TacheDB.Tache.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
