@@ -29,7 +29,6 @@ import com.example.calandarplus.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -148,6 +147,11 @@ public class DetailsTache extends AppCompatActivity {
 
     public void EnregisterModif(View view) {
         Log.d(TAG, "EnregisterModif");
+
+        //Enleve automatiquemet la selection de l'edittext
+        nom_tache.setEnabled(false);
+        nom_tache.setEnabled(true);
+
         String nom_tache_new = nom_tache.getText().toString();
         String nom_categorie_new = nom_cat.getSelectedItem().toString();
         Log.d(TAG, "nom tache : " +nom_tache_new + " | nom catégorie : " +nom_categorie_new );

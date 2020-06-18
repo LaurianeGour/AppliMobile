@@ -17,9 +17,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/RL_nom_tache"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+
+        android:layout_marginStart="@dimen/h_20"
+        android:layout_marginEnd="@dimen/h_20"
 
         android:layout_marginTop="10dp"
         android:background="@drawable/rect"
@@ -61,6 +63,8 @@
             android:textSize="@dimen/titre_page"
             android:textStyle="italic"
 
+            android:inputType="textMultiLine"
+
             app:layout_constraintStart_toStartOf="@+id/RL_nom_tache"
             app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail" />
 
@@ -68,9 +72,11 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/RL_nom_cat"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+
+        android:layout_marginStart="@dimen/h_20"
+        android:layout_marginEnd="@dimen/h_20"
 
         android:layout_marginTop="10dp"
         android:background="@drawable/rect"

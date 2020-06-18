@@ -8,17 +8,16 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import android.content.Intent;
 import android.util.Log;
 import com.example.calandarplus.R;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import java.util.Objects;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+//Non implémenté
 
 public class AjouterEvent extends AppCompatActivity {
 

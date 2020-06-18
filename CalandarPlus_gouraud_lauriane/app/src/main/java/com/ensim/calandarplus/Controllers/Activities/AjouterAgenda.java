@@ -17,6 +17,8 @@ import android.widget.ImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//Non implémenté
+
 public class AjouterAgenda extends AppCompatActivity {
     private static String TAG = "Ajouter Agenda";
 

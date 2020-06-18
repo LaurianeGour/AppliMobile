@@ -4,14 +4,9 @@ package com.ensim.calandarplus.Controllers.Fragments;
  * Author : Lauriane GOURAUD
  */
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.util.Log;
-import android.os.Bundle;
-import android.widget.ImageView;
-
 import com.example.calandarplus.R;
 
-import butterknife.BindView;
+//Non implémenté
 
 public class Parametres extends BaseFragment {
     //Definition des éléments de la vu (fragment_agenda_semaine.xml)

@@ -18,11 +18,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import com.ensim.calandarplus.Controllers.Fragments.AgendaJour;
 import com.ensim.calandarplus.Controllers.Fragments.AgendaSemaine;
-import com.ensim.calandarplus.Controllers.Fragments.BaseFragment;
 import com.ensim.calandarplus.Controllers.Fragments.GererAgendas;
 import com.ensim.calandarplus.Controllers.Fragments.Parametres;
 import com.ensim.calandarplus.Controllers.Fragments.ToDoList;

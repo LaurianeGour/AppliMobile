@@ -4,7 +4,6 @@ package com.ensim.calandarplus.Models;
  * Author : Lauriane GOURAUD
  */
 
-import android.app.FragmentManager;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -16,11 +15,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ensim.calandarplus.Controllers.Activities.MainActivity;
 import com.ensim.calandarplus.Controllers.Fragments.ToDoList;
 import com.example.calandarplus.R;
 

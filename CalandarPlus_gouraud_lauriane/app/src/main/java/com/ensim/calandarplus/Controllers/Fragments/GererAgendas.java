@@ -4,19 +4,13 @@ package com.ensim.calandarplus.Controllers.Fragments;
  * Author : Lauriane GOURAUD
  */
 
-import androidx.fragment.app.Fragment;
-
 import android.widget.TextView;
 
 import com.example.calandarplus.R;
 
 import butterknife.BindView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link GererAgendas#newInstance} factory method to
- * create an instance of this fragment.
- */
+//Non implémenté
 public class GererAgendas extends BaseFragment {
     //Definition des éléments de la vu (fragment_gerer_agendas.xml)
     @BindView(R.id.zone_texte_frag_gere_agenda) TextView textView;

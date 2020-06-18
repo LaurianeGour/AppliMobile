@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Author : Lauriane GOURAUD -->
+
+<resources>
+    <!-- Global -->
+    <string name="app_name">CalandarPlus</string>
+
+    <!-- For the menu -->
+    <string name="menu_button">Button menu</string>
+    <string name="Menu">Menu</string>
+    <string name="sychro">Synchronize</string>
+    <string name="todolist">" To Do List"</string>
+    <string name="gere_agenda">Manage calandar</string>
+    <string name="agenda">Schedule</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+
+    <!-- Name of the pages-->
+    <string name="parametres">Settings</string>
+    <string name="semaine">Week</string>
+    <string name="jour">Day</string>
+    <string name="ag_semaine">Weekly schedule</string>
+    <string name="ag_jour">Daily schedule</string>
+    <string name="add_event">Add an event</string>
+    <string name="ajouter_tache">Add a task</string>
+    <string name="add_agenda">Add a calandar</string>
+
+    <!-- For the ToDoList -->
+    <string name="erreur_categorie">This category already exists</string>
+    <string name="categorie">Category</string>
+    <string name="add_tache">Add a task</string>
+    <string name="add_categorie_2lignes">Add a \ncategory</string>
+    <string name="add_categorie">Add a category</string>
+    <string name="add_new_categorie">Add a new category to the To Do List</string>
+
+    <!-- For the detail of a task -->
+    <string name="nom_tache">Task name:</string>
+    <string name="nom_categorie">Category name:</string>
+    <string name="erreur_modif_tache">Error in the task modification</string>
+    <string name="details_tache">Detail a task</string>
+    <string name="detail">Detail</string>
+
+    <!-- Other -->
+    <string name="delete">Delete</string>
+    <string name="add">Add</string>
+    <string name="ok">Okay</string>
+    <string name="valider">Confirm</string>
+    <string name="icon_add">Add icon</string>
+    <string name="cancel">Cancel</string>
+    
+</resources>

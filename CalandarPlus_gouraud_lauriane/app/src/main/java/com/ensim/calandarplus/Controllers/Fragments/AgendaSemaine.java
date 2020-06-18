@@ -4,22 +4,12 @@ package com.ensim.calandarplus.Controllers.Fragments;
  * Author : Lauriane GOURAUD
  */
 
-import androidx.fragment.app.Fragment;
-
-import android.content.Intent;
-import android.util.Log;
-import android.view.View;
-import android.widget.CalendarView;
 import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.ensim.calandarplus.Controllers.Activities.AjouterEvent;
-import com.ensim.calandarplus.Controllers.Activities.MainActivity;
 import com.example.calandarplus.R;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
+//Non implémenté
 public class AgendaSemaine extends BaseFragment{
 
     private static String TAG = "Frag Semaine";
