@@ -42,6 +42,7 @@ public class DetailsTache extends AppCompatActivity {
     @BindView(R.id.Button_add) ImageView imageadd;
     @BindView(R.id.nom_tache_detail) EditText nom_tache;
     @BindView(R.id.nom_cat_detail) Spinner nom_cat;
+    @BindView(R.id.edit_text_description_detail) EditText description_tache;
 
     private int id_tache;
     private TacheHelper tache_helper;
@@ -129,14 +130,17 @@ public class DetailsTache extends AppCompatActivity {
         // Cherche les lignes de la tache tache dont la catégorie associé correspond à l'id trouvé plus haut
         //Renvoit un cursor contenant les Id de catégorie et le nom des taches associées
         Cursor cursor_tache = db_tache.query(TacheDB.Tache.TABLE,
-                new String[] {TacheDB.Tache.COL_TACHE_NAME,TacheDB.Tache.COL_ID_CAT},
+                new String[] {TacheDB.Tache.COL_TACHE_NAME,TacheDB.Tache.COL_ID_CAT, TacheDB.Tache.COL_DESCR},
                 TacheDB.Tache._ID +" = ?" , new String[] {String.valueOf(id_tache)}, null, null, null
         );
 
         while(cursor_tache.moveToNext()){
             Log.d(TAG, "Cursor tache non null");
+            String description = cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_DESCR));
+            if (description != null){
+                description_tache.setText(description);
+            }
             nom_tache.setText(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)));
-
             int id_cat = cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT));
             String categorie = list_cat.get(id_cat);
             Log.d(TAG, "Nom catégorie : "+ categorie);
@@ -152,8 +156,12 @@ public class DetailsTache extends AppCompatActivity {
         nom_tache.setEnabled(false);
         nom_tache.setEnabled(true);
 
+        description_tache.setEnabled(false);
+        description_tache.setEnabled(true);
+
         String nom_tache_new = nom_tache.getText().toString();
         String nom_categorie_new = nom_cat.getSelectedItem().toString();
+        String description_new = description_tache.getText().toString();
         Log.d(TAG, "nom tache : " +nom_tache_new + " | nom catégorie : " +nom_categorie_new );
         int id_categorie=-1;
         for(Map.Entry categorie : list_cat.entrySet()){
@@ -167,6 +175,7 @@ public class DetailsTache extends AppCompatActivity {
             ContentValues values = new ContentValues();
             values.put(TacheDB.Tache.COL_ID_CAT, id_categorie);
             values.put(TacheDB.Tache.COL_TACHE_NAME, nom_tache_new);
+            values.put(TacheDB.Tache.COL_DESCR, description_new);
             db_tache.update(TacheDB.Tache.TABLE, values, TacheDB.Tache._ID + "=" + id_tache, null);
             db_tache.close();
 

@@ -38,7 +38,8 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 15/06 | 6h20 | 34h50 |
 | 15/06 | 3h10 | 38h  |
 | 17/06 | 2h | 40h  |
-| 18/06 | 2h40 + 17h45 -> 19h20 | ?  |
+| 18/06 | 4h20 | 44h20  |
+| 19/06 | 15h30 ->  | ?  |
 
 
 #### Détails du projet :

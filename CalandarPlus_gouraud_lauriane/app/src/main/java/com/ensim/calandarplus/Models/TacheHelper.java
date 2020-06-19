@@ -26,7 +26,8 @@ public class TacheHelper extends SQLiteOpenHelper{
                 "CREATE TABLE  "+ TacheDB.Tache.TABLE+
                         " ( " + TacheDB.Tache._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                         TacheDB.Tache.COL_TACHE_NAME + " TEXT NOT NULL, "+
-                        TacheDB.Tache.COL_ID_CAT + " TEXT NOT NULL); ";
+                        TacheDB.Tache.COL_ID_CAT + " TEXT NOT NULL, "+
+                        TacheDB.Tache.COL_DESCR + " TEXT); ";
         db.execSQL(createTableCategorie);
     }
 

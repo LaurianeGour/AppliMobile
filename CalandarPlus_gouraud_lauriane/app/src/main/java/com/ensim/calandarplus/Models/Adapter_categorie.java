@@ -134,7 +134,7 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                 // Cherche les lignes de la tache tache dont la catégorie associé correspond à l'id trouvé plus haut
                 //Renvoit un cursor contenant les Id de catégorie et le nom des taches associées
                 Cursor cursor_tache = db_tache.query(TacheDB.Tache.TABLE,
-                        new String[] {TacheDB.Tache.COL_TACHE_NAME, TacheDB.Tache.COL_ID_CAT, TacheDB.Tache._ID},
+                        new String[] {TacheDB.Tache.COL_TACHE_NAME, TacheDB.Tache.COL_ID_CAT, TacheDB.Tache._ID, TacheDB.Tache.COL_DESCR},
                         TacheDB.Tache.COL_ID_CAT +" = ?" , new String[] {id}, null, null, null
                 );
 
@@ -145,9 +145,18 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                 //Pour chaque tache trouvée ajoute la tache à la liste des taches
                 while(cursor_tache.moveToNext()){
                     Log.d(TAG, "Cursor while");
-                    TacheDB.Tache newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
-                            cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)),
-                            cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache._ID)));
+                    TacheDB.Tache newTache;
+                    if (cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)) != null){
+                         newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
+                                cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)),
+                                cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache._ID)),
+                                 cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_DESCR)));
+                    }else{
+                        newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
+                                cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)),
+                                cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache._ID)));
+                    }
+
                     tache_list.add(newTache);
                 }
                 //convertie la liste des taches dans un format (adapter de tache) pour les afficher dans la recyclerview

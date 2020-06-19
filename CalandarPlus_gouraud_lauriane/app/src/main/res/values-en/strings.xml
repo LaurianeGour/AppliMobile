@@ -40,6 +40,8 @@
     <string name="erreur_modif_tache">Error in the task modification</string>
     <string name="details_tache">Detail a task</string>
     <string name="detail">Detail</string>
+    <string name="description">Description</string>
+    <string name="titre_description">Description: </string>
 
     <!-- Other -->
     <string name="delete">Delete</string>

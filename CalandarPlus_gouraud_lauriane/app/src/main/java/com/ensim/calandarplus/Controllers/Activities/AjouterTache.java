@@ -42,11 +42,12 @@ public class AjouterTache extends AppCompatActivity  implements
     private static String TAG = "Ajouter Tache";
 
     //Definition des éléments de la vu (activity_ajouter_tache.xml)
-    @BindView(R.id.include_toolbar) Toolbar toolbar;
+    @BindView(R.id.include_toolbar_ajouter_tache) Toolbar toolbar;
     @BindView(R.id.editText_ajouter_tache) EditText edit_text_tache;
     @BindView(R.id.spinner_lst_cat) Spinner spinner_categorie;
     @BindView(R.id.Button_add) ImageView imageadd;
     @BindView(R.id.valider_add_tache) Button bouton_add_tache;
+    @BindView(R.id.edit_text_description) EditText description_tache;
 
     private List<String> list_categorie;
     private List<Integer> list_id;
@@ -160,6 +161,9 @@ public class AjouterTache extends AppCompatActivity  implements
         edit_text_tache.setEnabled(false);
         edit_text_tache.setEnabled(true);
 
+        description_tache.setEnabled(false);
+        description_tache.setEnabled(true);
+
         TacheHelper tache_helper = new TacheHelper(this);
         //Ouvre la base de donnée de tache en lecture
         SQLiteDatabase db = tache_helper.getWritableDatabase();
@@ -167,11 +171,16 @@ public class AjouterTache extends AppCompatActivity  implements
         ContentValues values = new ContentValues();
         Log.d(TAG, "Nom cat : " + edit_text_tache.getText().toString());
         values.put(TacheDB.Tache.COL_TACHE_NAME, edit_text_tache.getText().toString());
+
         String nom_cat = spinner_categorie.getSelectedItem().toString();
         int index = list_categorie.indexOf(nom_cat);
         int id_categorie = list_id.get(index);
         Log.d(TAG, "____________________________________id cat : " +id_categorie);
         values.put(TacheDB.Tache.COL_ID_CAT, id_categorie);
+
+        String description_tache_new = description_tache.getText().toString();
+        values.put(TacheDB.Tache.COL_DESCR, description_tache_new);
+
         //Insert une nouvelle tache dans la table tache
         db.insertWithOnConflict(TacheDB.Tache.TABLE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
         db.close();

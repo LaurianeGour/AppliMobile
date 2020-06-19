@@ -40,6 +40,8 @@
     <string name="nom_categorie">Nom de la catégorie : </string>
     <string name="details_tache">Détails d\'une tache</string>
     <string name="erreur_modif_tache">Erreur dans la modification de la tâche</string>
+    <string name="description">Description</string>
+    <string name="titre_description">Description : </string>
 
     <!-- Autre-->
     <string name="add">Ajouter</string>
