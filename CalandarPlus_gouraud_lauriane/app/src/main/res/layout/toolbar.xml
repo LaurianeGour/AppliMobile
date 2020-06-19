@@ -16,7 +16,7 @@
 
         <!-- Image + affichée seulement sur certaines pages -->
         <ImageView
-            android:id="@+id/Button_add"
+            android:id="@+id/bouton_add_toolbar"
 
             android:layout_width="@dimen/icon_40"
             android:layout_height="@dimen/icon_40"

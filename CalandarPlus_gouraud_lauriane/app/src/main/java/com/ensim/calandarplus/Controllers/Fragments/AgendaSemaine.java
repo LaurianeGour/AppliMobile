@@ -15,7 +15,7 @@ public class AgendaSemaine extends BaseFragment{
     private static String TAG = "Frag Semaine";
 
     //Definition des éléments de la vu (fragment_agenda_semaine.xml)
-    @BindView(R.id.Button_sem_add_event) ImageView addevent;
+    @BindView(R.id.bouton_sem_add_event) ImageView addevent;
 
     //Retourne une instance du fragment AgendaSemaine
     public static AgendaSemaine newInstance() {

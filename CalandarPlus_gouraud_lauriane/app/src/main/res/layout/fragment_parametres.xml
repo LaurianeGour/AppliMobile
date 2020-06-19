@@ -10,7 +10,7 @@
 
     <!-- Contenu : Non implémenté -->
     <TextView
-        android:id="@+id/zone_texte_frag_parametres"
+        android:id="@+id/TV_frag_parametres"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/parametres"

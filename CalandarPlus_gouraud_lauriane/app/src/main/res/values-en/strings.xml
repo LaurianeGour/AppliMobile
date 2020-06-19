@@ -38,7 +38,7 @@
     <string name="nom_tache">Task name:</string>
     <string name="nom_categorie">Category name:</string>
     <string name="erreur_modif_tache">Error in the task modification</string>
-    <string name="details_tache">Detail a task</string>
+    <string name="details_tache">Detail of a task</string>
     <string name="detail">Detail</string>
     <string name="description">Description</string>
     <string name="titre_description">Description: </string>

@@ -43,11 +43,11 @@ public class AjouterTache extends AppCompatActivity  implements
 
     //Definition des éléments de la vu (activity_ajouter_tache.xml)
     @BindView(R.id.include_toolbar_ajouter_tache) Toolbar toolbar;
-    @BindView(R.id.editText_ajouter_tache) EditText edit_text_tache;
-    @BindView(R.id.spinner_lst_cat) Spinner spinner_categorie;
-    @BindView(R.id.Button_add) ImageView imageadd;
+    @BindView(R.id.ET_tache_new) EditText edit_text_tache;
+    @BindView(R.id.spinner_categorie_new) Spinner spinner_categorie;
+    @BindView(R.id.bouton_add_toolbar) ImageView imageadd;
     @BindView(R.id.valider_add_tache) Button bouton_add_tache;
-    @BindView(R.id.edit_text_description) EditText description_tache;
+    @BindView(R.id.ET_description_new) EditText description_tache;
 
     private List<String> list_categorie;
     private List<Integer> list_id;

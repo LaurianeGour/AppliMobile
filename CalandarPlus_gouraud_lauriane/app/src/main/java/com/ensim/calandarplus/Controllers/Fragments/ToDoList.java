@@ -47,8 +47,8 @@ public class ToDoList extends BaseFragment {
     public static final String TAG = "FragToDoList";
 
 
-    @BindView(R.id.recycler_view_categorie) RecyclerView recyclerView_categorie;
-    @BindView(R.id.button_add_categorie) Button bouton_add_categorie;
+    @BindView(R.id.RV_categorie) RecyclerView recyclerView_categorie;
+    @BindView(R.id.bouton_add_categorie) Button bouton_add_categorie;
 
     private CategorieHelper cat_helper;
     private Adapter_categorie m_adapter;
@@ -195,7 +195,7 @@ public class ToDoList extends BaseFragment {
         Log.d(TAG, "Delete_categorie");
         View parent = (View) view.getParent();
         //Récupere le nom de la catégorie qu'il faut supprimer
-        TextView textView = (TextView) parent.findViewById(R.id.nom_categorie);
+        TextView textView = (TextView) parent.findViewById(R.id.nom_categorie_card);
         String categorie = String.valueOf(textView.getText());
         //Ecrit dans la base de donnée
         SQLiteDatabase db = cat_helper.getWritableDatabase();

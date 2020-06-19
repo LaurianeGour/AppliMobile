@@ -15,7 +15,7 @@
 
     <!-- Contenu : non implémenté -->
     <TextView
-        android:id="@+id/zone_texte_add_ag"
+        android:id="@+id/TV_add_ag"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/add_agenda"

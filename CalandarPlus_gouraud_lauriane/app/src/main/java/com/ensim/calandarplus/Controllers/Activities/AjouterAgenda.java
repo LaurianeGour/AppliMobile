@@ -24,7 +24,7 @@ public class AjouterAgenda extends AppCompatActivity {
 
     //Definition des éléments de la vu (activity_main.xml)
     @BindView(R.id.toolbar) Toolbar toolbar;
-    @BindView(R.id.Button_add) ImageView imageadd;
+    @BindView(R.id.bouton_add_toolbar) ImageView imageadd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

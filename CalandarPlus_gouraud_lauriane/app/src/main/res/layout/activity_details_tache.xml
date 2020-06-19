@@ -12,11 +12,10 @@
         android:id="@+id/include_toolbar_detail_tache"
         layout="@layout/toolbar"
 
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="180dp" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/RL_nom_tache"
+        android:id="@+id/CL_nom_tache_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -49,8 +48,8 @@
             android:textSize="@dimen/titre_page"
             android:textStyle="bold"
 
-            app:layout_constraintStart_toStartOf="@+id/RL_nom_tache"
-            app:layout_constraintTop_toTopOf="@+id/RL_nom_tache" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/nom_tache_detail"
@@ -65,13 +64,13 @@
 
             android:inputType="textMultiLine"
 
-            app:layout_constraintStart_toStartOf="@+id/RL_nom_tache"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/titre_nom_tache_detail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/RL_nom_cat"
+        android:id="@+id/CL_nom_cat_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -91,7 +90,7 @@
         android:paddingBottom="@dimen/h_5"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RL_nom_tache">
+        app:layout_constraintTop_toBottomOf="@+id/CL_nom_tache_detail">
 
         <TextView
             android:id="@+id/titre_nom_cat_detail"
@@ -123,7 +122,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/CL_description"
+        android:id="@+id/CL_description_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -143,10 +142,10 @@
         android:paddingBottom="@dimen/h_5"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/RL_nom_cat">
+        app:layout_constraintTop_toBottomOf="@+id/CL_nom_cat_detail">
 
         <TextView
-            android:id="@+id/Text_description_detail"
+            android:id="@+id/text_description_detail"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -159,7 +158,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/edit_text_description_detail"
+            android:id="@+id/ET_description_detail"
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -173,12 +172,12 @@
             android:inputType="textMultiLine"
 
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Text_description_detail" />
+            app:layout_constraintTop_toBottomOf="@+id/text_description_detail" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/bouton_save_modif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
@@ -187,7 +186,7 @@
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CL_description"
+        app:layout_constraintTop_toBottomOf="@+id/CL_description_detail"
 
         android:onClick="EnregisterModif"/>
 

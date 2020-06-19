@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Fragment frag_parametres;
 
     //Definition des éléments de la vu (activity_main.xml)
-    @BindView(R.id.toolbar) Toolbar toolbar;
+    @BindView(R.id.include_toolbar_main) Toolbar toolbar;
     @BindView(R.id.drawer_layout_main) DrawerLayout drawerLayout;
     @BindView(R.id.nav_view_main) NavigationView navigationView;
-    @BindView(R.id.Button_add) ImageView imageadd;
+    @BindView(R.id.bouton_add_toolbar) ImageView imageadd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void startTransactionFragment(Fragment fragment){
         Log.d(TAG, "Changement Fragment");
         if(!fragment.isVisible()){
-            getSupportFragmentManager().beginTransaction().replace(R.id.frag_init,fragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.frag_init_main,fragment).commit();
         }
     }
 
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     //Affichage du premier fragement : lors sdu lancement de l'application --> la ToDoList
     private void showFirstFragment(){
         Log.d(TAG, "Affichage 1er Fragment");
-        Fragment frag = getSupportFragmentManager().findFragmentById(R.id.frag_init);;
+        Fragment frag = getSupportFragmentManager().findFragmentById(R.id.frag_init_main);;
         if(frag == null){
             this.showFragToDoList();;
             this.navigationView.getMenu().getItem(0).setChecked(true);
@@ -237,14 +237,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Log.d(TAG, "OnClick");
         switch (v.getId()) {
             //Si bouton pour ajouter un nouvel evenement
-            case R.id.Button_jour_add_event:
-            case R.id.Button_sem_add_event:
+            case R.id.bouton_jour_add_event:
+            case R.id.bouton_sem_add_event:
                 Intent intent= new Intent(MainActivity.this, AjouterEvent.class);
                 startActivity(intent);
                 break;
 
             //Si bouton ajouté de la toolbar
-            case R.id.Button_add :
+            case R.id.bouton_add_toolbar :
                 Intent intent_add = null;
                 //Géré uniquement sur les pages sur lesquelles il est affiché
                 switch(TAG){

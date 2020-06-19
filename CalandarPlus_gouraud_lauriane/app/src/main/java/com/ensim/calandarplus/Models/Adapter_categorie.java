@@ -40,10 +40,10 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
     //1 element
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        @BindView(R.id.nom_categorie)TextView text_categorie_name;
-        @BindView(R.id.delete_categorie)Button delete_categorie;
-        @BindView(R.id.Add_tache_cat) Button add_tache;
-        @BindView(R.id.recycler_view_task) RecyclerView recyclerView_task;
+        @BindView(R.id.nom_categorie_card)TextView text_categorie_name;
+        @BindView(R.id.delete_categorie_card)Button delete_categorie;
+        @BindView(R.id.add_tache_cat) Button add_tache;
+        @BindView(R.id.RV_tache) RecyclerView recyclerView_task;
 
         private CategorieHelper cat_helper;
         private TacheHelper tache_helper;

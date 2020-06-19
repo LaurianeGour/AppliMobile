@@ -20,11 +20,11 @@
             android:layout_height="wrap_content">
 
             <include
-                android:id="@+id/include_categorie_RV"
+                android:id="@+id/include_RV_categorie"
                 layout="@layout/recyclerview_categorie" />
 
             <Button
-            android:id="@+id/button_add_categorie"
+            android:id="@+id/bouton_add_categorie"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/h_100"
             android:onClick="Add_new_categorie"

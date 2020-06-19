@@ -19,11 +19,13 @@
 
         <!-- toolbar définie dans toolbar.xml-->
         <include
-        layout="@layout/toolbar"/>
+            android:id="@+id/include_toolbar_main"
+            layout="@layout/toolbar"
+         />
 
         <!-- Récupération du layout d'un fragment -->
         <FrameLayout
-            android:id="@+id/frag_init"
+            android:id="@+id/frag_init_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 

@@ -39,10 +39,10 @@ public class DetailsTache extends AppCompatActivity {
 
     //Definition des éléments de la vu (activity_details_tache.xml)
     @BindView(R.id.include_toolbar_detail_tache) Toolbar toolbar;
-    @BindView(R.id.Button_add) ImageView imageadd;
+    @BindView(R.id.bouton_add_toolbar) ImageView imageadd;
     @BindView(R.id.nom_tache_detail) EditText nom_tache;
     @BindView(R.id.nom_cat_detail) Spinner nom_cat;
-    @BindView(R.id.edit_text_description_detail) EditText description_tache;
+    @BindView(R.id.ET_description_detail) EditText description_tache;
 
     private int id_tache;
     private TacheHelper tache_helper;

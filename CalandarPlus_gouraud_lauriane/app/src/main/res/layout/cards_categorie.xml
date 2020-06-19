@@ -20,7 +20,7 @@
             android:layout_margin="@dimen/h_5">
 
             <TextView
-                android:id="@+id/nom_categorie"
+                android:id="@+id/nom_categorie_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:baselineAlignBottom="true"
@@ -30,7 +30,7 @@
                 android:textSize="@dimen/nom_champ"/>
 
             <Button
-                android:id="@+id/delete_categorie"
+                android:id="@+id/delete_categorie_card"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/h_40"
                 android:onClick="DeleteCategorie"
@@ -38,13 +38,13 @@
                 android:layout_marginBottom="@dimen/h_10"/>
 
             <include
-                android:id="@+id/include_tache_RV"
+                android:id="@+id/include_RV_tache"
                 layout="@layout/recyclerview_tache"
                 android:layout_width="@dimen/h_150"
                 android:layout_height="wrap_content"/>
 
             <Button
-                android:id="@+id/Add_tache_cat"
+                android:id="@+id/add_tache_cat"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/h_40"
                 android:text="@string/ajouter_tache"

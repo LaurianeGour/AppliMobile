@@ -10,7 +10,7 @@
 
     <!-- Contenu : Non implémenté -->
     <TextView
-        android:id="@+id/zone_texte_frag_gere_agenda"
+        android:id="@+id/TV_frag_gere_agenda"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/gere_agenda"

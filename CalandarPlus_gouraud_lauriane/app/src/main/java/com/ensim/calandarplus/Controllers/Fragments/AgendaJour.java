@@ -17,8 +17,8 @@ public class AgendaJour extends BaseFragment {
     private static String TAG = "Frag Jour";
 
     //Definition des éléments de la vu (fragment_agenda_jour.xml)
-    @BindView(R.id.zone_texte_frag_jour) TextView textView;
-    @BindView(R.id.Button_jour_add_event) ImageView addevent;
+    @BindView(R.id.TV_frag_jour) TextView textView;
+    @BindView(R.id.bouton_jour_add_event) ImageView addevent;
 
     //Retourne une instance du fragment AgendaJour
     public static AgendaJour newInstance() {

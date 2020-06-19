@@ -13,7 +13,7 @@ import butterknife.BindView;
 //Non implémenté
 public class GererAgendas extends BaseFragment {
     //Definition des éléments de la vu (fragment_gerer_agendas.xml)
-    @BindView(R.id.zone_texte_frag_gere_agenda) TextView textView;
+    @BindView(R.id.TV_frag_gere_agenda) TextView textView;
 
     //Retourne une instance du fragment GererAgendas
     public static GererAgendas newInstance() {

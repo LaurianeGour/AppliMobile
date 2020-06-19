@@ -25,8 +25,8 @@
 
     <ImageView
         android:id="@+id/delete_tache"
-        android:layout_width="@dimen/icon_20"
-        android:layout_height="@dimen/icon_20"
+        android:layout_width="@dimen/icon_40"
+        android:layout_height="@dimen/icon_40"
 
         android:layout_alignParentEnd="true"
         android:gravity="center"
