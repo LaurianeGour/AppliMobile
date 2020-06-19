@@ -188,6 +188,8 @@ public class ToDoList extends BaseFragment {
                 is_not_exist = false;
             }
         }
+        db.close();
+        cursor.close();
         return is_not_exist;
     }
 
@@ -209,6 +211,8 @@ public class ToDoList extends BaseFragment {
         while(cursor_cat.moveToNext()){
              id_cat = cursor_cat.getInt(cursor_cat.getColumnIndex(Categorie._ID));
         }
+
+        cursor_cat.close();
 
         //Suppression de la catégorie
         db.delete(Categorie.TABLE, Categorie.COL_CAT_NAME + " = ? ", new String[] {categorie});

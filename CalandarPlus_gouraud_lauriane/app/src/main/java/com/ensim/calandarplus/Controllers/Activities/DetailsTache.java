@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.DialogInterface;
@@ -128,7 +129,7 @@ public class DetailsTache extends AppCompatActivity {
 
         //Requete SQL à l'aide de l'helper de tache :
         // Cherche les lignes de la tache tache dont la catégorie associé correspond à l'id trouvé plus haut
-        //Renvoit un cursor contenant les Id de catégorie et le nom des taches associées
+        //Renvoit un cursor contenant les Id de catégorie + le nom et la description des taches associées
         Cursor cursor_tache = db_tache.query(TacheDB.Tache.TABLE,
                 new String[] {TacheDB.Tache.COL_TACHE_NAME,TacheDB.Tache.COL_ID_CAT, TacheDB.Tache.COL_DESCR},
                 TacheDB.Tache._ID +" = ?" , new String[] {String.valueOf(id_tache)}, null, null, null
@@ -159,6 +160,7 @@ public class DetailsTache extends AppCompatActivity {
         description_tache.setEnabled(false);
         description_tache.setEnabled(true);
 
+        //Recupère les valeurs des champs de la vu
         String nom_tache_new = nom_tache.getText().toString();
         String nom_categorie_new = nom_cat.getSelectedItem().toString();
         String description_new = description_tache.getText().toString();
@@ -170,6 +172,7 @@ public class DetailsTache extends AppCompatActivity {
             }
         }
         Log.d(TAG, "id catégorie : "+id_categorie);
+        //Pour faire les modifications
         if(id_categorie!=-1){
             SQLiteDatabase db_tache = tache_helper.getWritableDatabase();
             ContentValues values = new ContentValues();

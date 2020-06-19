@@ -132,6 +132,9 @@ public class AjouterTache extends AppCompatActivity  implements
         //associe l'adapteur au spinnet
         spinner_categorie.setAdapter(aa);
 
+        //Si on vient sur cette activité après avoir cliqué sur le bouton "Add a task" d'une catégorie
+            // Un extras est passé avec le nom de la catégorie (à laquelle la nouvelle tache devra être associée)
+            // Le spinner prends donc comme valeur par défaut le nom de cette catégorie si c'est le cas
         Bundle extras = getIntent().getExtras();
         if(extras != null){
             String nom_categorie = extras.getString("nom_cat");
@@ -157,7 +160,7 @@ public class AjouterTache extends AppCompatActivity  implements
     public void ValiderAjoutTache(View view) {
         Log.d(TAG, "Valider Ajout tache");
 
-        //Enleve automatiquemet la selection de l'edittext
+        //Enleve automatiquemet la selection des edittext
         edit_text_tache.setEnabled(false);
         edit_text_tache.setEnabled(true);
 
@@ -167,7 +170,7 @@ public class AjouterTache extends AppCompatActivity  implements
         TacheHelper tache_helper = new TacheHelper(this);
         //Ouvre la base de donnée de tache en lecture
         SQLiteDatabase db = tache_helper.getWritableDatabase();
-        //Values sera les parametres à reneigner : nom de la tache et id de la catégorie associée
+        //Values sera les parametres à reneigner : nom de la tache, id de la catégorie associée et la description (optionnelle) de la tache
         ContentValues values = new ContentValues();
         Log.d(TAG, "Nom cat : " + edit_text_tache.getText().toString());
         values.put(TacheDB.Tache.COL_TACHE_NAME, edit_text_tache.getText().toString());

@@ -146,12 +146,14 @@ public class Adapter_categorie extends RecyclerView.Adapter<Adapter_categorie.Vi
                 while(cursor_tache.moveToNext()){
                     Log.d(TAG, "Cursor while");
                     TacheDB.Tache newTache;
+                    //Si une description à la tache est renseignée
                     if (cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)) != null){
                          newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
                                 cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)),
                                 cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache._ID)),
                                  cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_DESCR)));
                     }else{
+                        //Si aucune description n'est renseignée
                         newTache = new TacheDB.Tache(cursor_tache.getString(cursor_tache.getColumnIndex(TacheDB.Tache.COL_TACHE_NAME)),
                                 cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache.COL_ID_CAT)),
                                 cursor_tache.getInt(cursor_tache.getColumnIndex(TacheDB.Tache._ID)));

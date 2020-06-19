@@ -130,7 +130,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-
     //Lance le changement de fragment affiché par l'application
     private void startTransactionFragment(Fragment fragment){
         Log.d(TAG, "Changement Fragment");
@@ -138,8 +137,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.frag_init_main,fragment).commit();
         }
     }
-
-
 
 
 
