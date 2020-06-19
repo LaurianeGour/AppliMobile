@@ -1,5 +1,5 @@
 # Projet Application Mobile - Android Studio - CalandarPlus
-
+## Idée initiale : 
 >J’ai eu pour idée de concevoir une application me permettant de gérer mon temps. En effet, jusqu’alors, j’ai : une application pour visualiser mon emploi du temps de l’université, des to do list pour ne pas oublier de choses à faire, et un tableau qui me permet de faire un emploi du temps complet. J’ai alors pensé à une application me permettant de regrouper tout cela.
 
 
