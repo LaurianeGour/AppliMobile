@@ -15,7 +15,7 @@
         layout="@layout/toolbar"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <!-- 1er titre et champ : nom de la nouvelle tache-->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/CL_nom_tache_new"
         android:layout_width="match_parent"
@@ -40,6 +40,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/include_toolbar_ajouter_tache">
 
+        <!-- Titre indiquant que le champ suivant concerne le nom de la nouvelle tache -->
         <TextView
             android:id="@+id/titre_tache_new"
 
@@ -53,6 +54,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- zone de texte où l'utilisateur doit renseigner le nom de la nouvelle tache -->
         <EditText
             android:id="@+id/ET_tache_new"
 
@@ -71,6 +73,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- 2eme titre et champ : nom de la catégorie associée -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/CL_nom_cat_new"
         android:layout_width="match_parent"
@@ -94,6 +97,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CL_nom_tache_new">
 
+        <!-- Titre indiquant que le champ suivant concerne la catégorie associée à la nouvelle tache -->
         <TextView
             android:id="@+id/titre_categorie_new"
 
@@ -107,6 +111,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Liste deroulante contenant la liste des catégories existantes dans la base de données -->
         <Spinner
             android:id="@+id/spinner_categorie_new"
 
@@ -123,6 +128,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- 3eme titre et champ : description de la nouvelle tache -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/CL_description_new"
         android:layout_width="match_parent"
@@ -146,6 +152,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/CL_nom_cat_new">
 
+        <!-- Titre indiquant que le champ suivant concerne la description de la nouvelle tache -->
         <TextView
             android:id="@+id/titre_description_new"
 
@@ -159,6 +166,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <!-- Zone de texte où l'utilisateur peut renseigner la decription de la nouvelle tache -->
         <EditText
             android:id="@+id/ET_description_new"
 
@@ -178,6 +186,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- Bouton pour valider la nouvelle tache -> l'enregistrer dans la base de données -->
     <Button
         android:id="@+id/valider_add_tache"
 

@@ -27,6 +27,7 @@ import com.ensim.calandarplus.Models.Adapter_categorie;
 import com.ensim.calandarplus.Models.CategorieDB.Categorie;
 import com.ensim.calandarplus.Models.CategorieDB;
 import com.ensim.calandarplus.Models.CategorieHelper;
+import com.ensim.calandarplus.Models.TacheDB;
 import com.ensim.calandarplus.Models.TacheDB.Tache;
 import com.ensim.calandarplus.Models.TacheHelper;
 import com.example.calandarplus.R;
@@ -199,9 +200,23 @@ public class ToDoList extends BaseFragment {
         String categorie = String.valueOf(textView.getText());
         //Ecrit dans la base de donnée
         SQLiteDatabase db = cat_helper.getWritableDatabase();
+        int id_cat=-1;
+
+        Cursor cursor_cat = db.query(CategorieDB.Categorie.TABLE,
+                new String[] {Categorie._ID},
+                Categorie.COL_CAT_NAME +" = ?" , new String[] {categorie}, null, null, null
+        );
+        while(cursor_cat.moveToNext()){
+             id_cat = cursor_cat.getInt(cursor_cat.getColumnIndex(Categorie._ID));
+        }
+
         //Suppression de la catégorie
         db.delete(Categorie.TABLE, Categorie.COL_CAT_NAME + " = ? ", new String[] {categorie});
         db.close();
+
+        SQLiteDatabase db_tache = tache_helper.getWritableDatabase();
+        db.delete(Tache.TABLE, Tache.COL_ID_CAT + " = ? ", new String[] {String.valueOf(id_cat)});
+        db_tache.close();
         updateDesign();
     }
 

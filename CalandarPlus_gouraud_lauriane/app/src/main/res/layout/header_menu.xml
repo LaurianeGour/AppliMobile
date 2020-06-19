@@ -2,6 +2,7 @@
 
 <!-- Author : Lauriane GOURAUD -->
 
+<!-- Zone qui sera présente en haut du menu défilant (sur la gauche de l'écran) -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,7 +11,6 @@
     android:background="@color/colorPrimary"
     android:gravity="center"
     android:orientation="vertical">
-
 
     <TextView
         android:id="@+id/text_view_menu"

@@ -11,6 +11,7 @@
     tools:context="com.ensim.calandarplus.Controllers.Fragments.ToDoList"
     android:orientation="vertical">
 
+    <!-- La liste des catégories est horizontal -> si il y a plusieurs catégories : besoin d'une horizontalScrollView -->
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="match_parent">
@@ -19,6 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
+            <!-- Affichage de la liste des catégories à l'aide d'une recyclerview -->
             <include
                 android:id="@+id/include_RV_categorie"
                 layout="@layout/recyclerview_categorie" />

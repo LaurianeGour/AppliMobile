@@ -9,6 +9,7 @@
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+    <!-- RecyclerView qui contiendra la liste des taches (définit dans cards_tache.xml) -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RV_tache"
         android:layout_width="match_parent"
