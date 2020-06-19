@@ -13,20 +13,20 @@
 - Permettre à l’utilisateur de personnaliser le thème de l’application  -> Abandonné le 13/05
 - Afficher les informations voulu par l’utilisateur sur l’emploi du temps (titre, lieu, heure par exemple), puis détails lorsque l’on clique sur un évènement. -> Abandonné le 16/06
 - Pouvoir noter et catégoriser les taches à faire.
-- Pouvoir indiquer l’état d’avancement d’une tache.
+- Pouvoir indiquer l’état d’avancement d’une tache. -> Non réalisée
 
 Objectif au 16/06 : Faire une ToDoList la plus complete possible
 
 ## Suivit de projet :
 ### Developpement :
 
-#### Temps de developpement : entre 40 et 45 heures
+#### Temps de developpement : entre 48 et 52 heures
 
-Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
+Temps compté à partir du 7 mai (je n'y avais pas pensé avant) :
 
 
 | Date |  Temps |  Total à partir du 7/05  |
-|:-------------------:|:--------------------:|:---------------:|
+|:----:|:------:|:-------------------------:|
 | 7/05  | 3h  | 3h  |
 | 9/05 |  4h30  | 7h30 |
 | 10/05  | 5h30 |  13h |
@@ -39,7 +39,7 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 | 15/06 | 3h10 | 38h  |
 | 17/06 | 2h | 40h  |
 | 18/06 | 4h20 | 44h20  |
-| 19/06 | 15h30 ->  | ?  |
+| 19/06 | 2h40 | 47h  |
 
 
 #### Détails du projet :
@@ -48,31 +48,27 @@ Temps compté à partir du 7 mai (je n'y avais pas pensé avant)
 - Création des fragments et des activités
 - Création d'un menu de navigation
 - Developpement de la navigation entre les pages
-- Création et suppression de catégorie dans la toDoList
-- Création et suppression de taches associé à des catégorie pour la todolist
-- Modification des taches
+- Création et suppression de catégories dans la toDoList
+- Création, modification et suppression de taches associé à une catégorie pour la todolist
 - Ajouter un values-en -> strings.xml permettant de passer l'application en anglais (si le smartphone est en anglais)
 
 #### Outils / Technologies utilisés :
-- Utilisation des librairies Butterrknife et Icepick
-- Utilisation des log
+- librairies Butterrknife (et Icepick -> dans les dépendances mais non utilisé)
+- log.d
 - Pour apprendre à personnaliser mes layout : HorizontalScrollView / RecyclerView / Include(layout) / etc
 - Bases de données et tables locales (SQLite)
 - Utilisation d'activités et de fragments
 
 ### Difficultés rencontrées :
-> Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer.
+> Beaucoup de mal à commencer le developpement : Premier projet Android Studio donc peu de connaissances + Pas sure de savoir par ou commencer. Je voulais bien faire, et j'ai passé trop de temps à regardé des tutoriels (~10 heures) avant de commencer le developpement (Avec le recul, cela n'a pas été très utile)
 
-
-> Je pensais utiliser la CalandarView proposée par Android Studio pour pouvoir afficher un calandrier hebdomadaire ou journalier.
-
+> Je pensais utiliser la CalandarView proposée par Android Studio pour pouvoir afficher un calandrier hebdomadaire ou journalier (ELle propose une vu mensuel). Cela m'a frené dans mon elan pour faire les agendas.
 
 > Gros manque de temps : Je ne voulais pas travailler dessus par petits crénaux (car je n'ai pas le temps d'avancer) mais nous avions malheureusement beaucoup de projets/tp noté à faire en parallèle (notamment notre projet de 4ème année dont la soutenance était le 18/06)
 
+>Peu de recul sur le temps que me prendraient les tâches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet. Je pense que les Fonctionnalités que j'avais prévues initialement étaient trop ambicieuses pour les connaissances que j'avais avant le projet, mais je pense que j'aurais tout de même pu plus optimiser mon temps pour rendre une application plus complete et ergonomique.
 
->Peu de recul sur le temps que me prendraient les tâches avant de les commencer : Mauvaise estimation du temps nécéssaire à la réalisation de ce projet
-
-> Ordinateur parfois lent : Il arrivait régulièrement que mon ordinateur arrete de réagire pendant ~ 1 min (legère perte de temps et déconcentration)
+> Ordinateur parfois lent : Il arrivait régulièrement que mon ordinateur arrete de réagir pendant ~ 1 min ou soit très ralantis pendant une dizaine de minutes : (legère perte de temps et déconcentration)
 
 ### Bibliographie :
 
