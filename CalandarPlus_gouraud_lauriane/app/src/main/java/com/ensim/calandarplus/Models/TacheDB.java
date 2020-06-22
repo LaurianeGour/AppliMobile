@@ -12,7 +12,7 @@ import butterknife.Optional;
 //Création des attributs propre à la base de donnée TacheDB
 public class TacheDB {
     public static final String DB_NAME = "db_tache";
-    public static final int DB_VERSION = 3;
+    public static final int DB_VERSION = 4;
 
     //Represente une table Tache
     public static class Tache implements BaseColumns {

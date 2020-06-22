@@ -203,24 +203,25 @@ public class ToDoList extends BaseFragment {
         //Ecrit dans la base de donnée
         SQLiteDatabase db = cat_helper.getWritableDatabase();
         int id_cat=-1;
-
         Cursor cursor_cat = db.query(CategorieDB.Categorie.TABLE,
                 new String[] {Categorie._ID},
                 Categorie.COL_CAT_NAME +" = ?" , new String[] {categorie}, null, null, null
         );
+
         while(cursor_cat.moveToNext()){
              id_cat = cursor_cat.getInt(cursor_cat.getColumnIndex(Categorie._ID));
         }
-
         cursor_cat.close();
+
+        SQLiteDatabase db_tache = tache_helper.getWritableDatabase();
+        db_tache.delete(TacheDB.Tache.TABLE, TacheDB.Tache.COL_ID_CAT + " = ? ", new String[] {String.valueOf(id_cat)});
+        db_tache.close();
 
         //Suppression de la catégorie
         db.delete(Categorie.TABLE, Categorie.COL_CAT_NAME + " = ? ", new String[] {categorie});
         db.close();
 
-        SQLiteDatabase db_tache = tache_helper.getWritableDatabase();
-        db.delete(Tache.TABLE, Tache.COL_ID_CAT + " = ? ", new String[] {String.valueOf(id_cat)});
-        db_tache.close();
+
         updateDesign();
     }
 
